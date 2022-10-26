@@ -1,0 +1,13 @@
+{
+  "_cts": {
+    "page": {},
+    "homepage": {}
+  },
+  "slices": {
+    "HeroBanner": {
+      "default": {
+        "primary": {}
+      }
+    }
+  }
+}
