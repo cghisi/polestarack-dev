@@ -1,5 +1,5 @@
 import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
+import { PrismicLink, PrismicRichText } from "@prismicio/react";
 
 /**
  * @typedef {import("@prismicio/client").Content.HeroBannerSlice} HeroBannerSlice
@@ -22,7 +22,9 @@ const HeroBanner = ({ slice }) => (
       }
       {
         slice.primary.cta_link ?
-        <a href="">test</a>
+        <PrismicLink field={slice.primary.cta_link}>
+          {slice.primary.cta_label} 
+        </PrismicLink>
         : <a>Template slice, update me!</a>
       }
     </div>
