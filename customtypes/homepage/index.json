@@ -12,6 +12,9 @@
           "choices": {
             "hero_banner": {
               "type": "SharedSlice"
+            },
+            "grid_component": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -24,7 +24,7 @@ interface HomepageDocumentData {
  * Slice for *homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroBannerSlice;
+type HomepageDocumentDataSlicesSlice = HeroBannerSlice | GridComponentSlice;
 /**
  * homepage document from Prismic
  *
@@ -65,6 +65,111 @@ type PageDocumentDataSlicesSlice = HeroBannerSlice;
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<PageDocumentData>, "page", Lang>;
 export type AllDocumentTypes = HomepageDocument | PageDocument;
+/**
+ * Primary content in GridComponent → Primary
+ *
+ */
+interface GridComponentSliceDefaultPrimary {
+    /**
+     * Title field in *GridComponent → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: grid_component.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *GridComponent → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: grid_component.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Item in GridComponent → Items
+ *
+ */
+export interface GridComponentSliceDefaultItem {
+    /**
+     * Title field in *GridComponent → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Description field in *GridComponent → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Button Title field in *GridComponent → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].cta_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    cta_title: prismicT.RichTextField;
+    /**
+     * Button Link field in *GridComponent → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+    /**
+     * Image field in *GridComponent → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for GridComponent Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `GridComponent`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type GridComponentSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<GridComponentSliceDefaultPrimary>, Simplify<GridComponentSliceDefaultItem>>;
+/**
+ * Slice variation for *GridComponent*
+ *
+ */
+type GridComponentSliceVariation = GridComponentSliceDefault;
+/**
+ * GridComponent Shared Slice
+ *
+ * - **API ID**: `grid_component`
+ * - **Description**: `GridComponent`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type GridComponentSlice = prismicT.SharedSlice<"grid_component", GridComponentSliceVariation>;
 /**
  * Primary content in HeroBanner → Primary
  *
@@ -144,11 +249,106 @@ type HeroBannerSliceVariation = HeroBannerSliceDefault;
  *
  */
 export type HeroBannerSlice = prismicT.SharedSlice<"hero_banner", HeroBannerSliceVariation>;
+/**
+ * Primary content in ImageSlider → Primary
+ *
+ */
+interface ImageSliderSliceDefaultPrimary {
+    /**
+     * Title field in *ImageSlider → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: image_slider.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *ImageSlider → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: image_slider.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Item in ImageSlider → Items
+ *
+ */
+export interface ImageSliderSliceDefaultItem {
+    /**
+     * Title field in *ImageSlider → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image_slider.items[].image_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    image_title: prismicT.RichTextField;
+    /**
+     * Description field in *ImageSlider → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image_slider.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Button Title field in *ImageSlider → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image_slider.items[].CTA_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    CTA_title: prismicT.RichTextField;
+    /**
+     * Button Link field in *ImageSlider → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image_slider.items[].CTA_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    CTA_link: prismicT.LinkField;
+}
+/**
+ * Default variation for ImageSlider Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ImageSlider`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImageSliderSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ImageSliderSliceDefaultPrimary>, Simplify<ImageSliderSliceDefaultItem>>;
+/**
+ * Slice variation for *ImageSlider*
+ *
+ */
+type ImageSliderSliceVariation = ImageSliderSliceDefault;
+/**
+ * ImageSlider Shared Slice
+ *
+ * - **API ID**: `image_slider`
+ * - **Description**: `ImageSlider`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImageSliderSlice = prismicT.SharedSlice<"image_slider", ImageSliderSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, GridComponentSliceDefaultPrimary, GridComponentSliceDefaultItem, GridComponentSliceDefault, GridComponentSliceVariation, GridComponentSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageSliderSliceDefaultPrimary, ImageSliderSliceDefaultItem, ImageSliderSliceDefault, ImageSliderSliceVariation, ImageSliderSlice };
     }
 }
