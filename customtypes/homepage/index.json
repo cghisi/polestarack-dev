@@ -15,6 +15,12 @@
             },
             "grid_component": {
               "type": "SharedSlice"
+            },
+            "canvas_slider": {
+              "type": "SharedSlice"
+            },
+            "image_slider": {
+              "type": "SharedSlice"
             }
           }
         }

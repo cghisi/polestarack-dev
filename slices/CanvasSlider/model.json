@@ -1,15 +1,15 @@
 {
-  "id": "grid_component",
+  "id": "canvas_slider",
   "type": "SharedSlice",
-  "name": "GridComponent",
-  "description": "GridComponent",
+  "name": "CanvasSlider",
+  "description": "CanvasSlider",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "GridComponent",
+      "description": "CanvasSlider",
       "primary": {
         "title": {
           "type": "StructuredText",
@@ -26,51 +26,31 @@
             "label": "Description",
             "placeholder": "A nice description of your feature"
           }
+        },
+        "image_url": {
+          "type": "Text",
+          "config": {
+            "label": "Image URL",
+            "placeholder": ""
+          }
         }
       },
       "items": {
-        "title": {
+        "slide_title": {
           "type": "StructuredText",
           "config": {
-            "label": "Title",
+            "label": "Slide Title",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "description": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Description",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "cta_title": {
-          "type": "StructuredText",
-          "config": {
-            "label": "Button Title",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "cta_link": {
+        "slide_link": {
           "type": "Link",
           "config": {
-            "label": "Button Link",
+            "label": "Slide Link",
             "placeholder": "",
-            "allowTargetBlank": false,
             "select": null
-          }
-        },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
           }
         }
       },

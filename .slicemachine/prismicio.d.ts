@@ -24,7 +24,7 @@ interface HomepageDocumentData {
  * Slice for *homepage → Slice Zone*
  *
  */
-type HomepageDocumentDataSlicesSlice = HeroBannerSlice | GridComponentSlice;
+type HomepageDocumentDataSlicesSlice = HeroBannerSlice | GridComponentSlice | CanvasSliderSlice | ImageSliderSlice;
 /**
  * homepage document from Prismic
  *
@@ -66,12 +66,97 @@ type PageDocumentDataSlicesSlice = HeroBannerSlice;
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<PageDocumentData>, "page", Lang>;
 export type AllDocumentTypes = HomepageDocument | PageDocument;
 /**
- * Primary content in GridComponent → Primary
+ * Primary content in CanvasSlider → Primary
+ *
+ */
+interface CanvasSliderSliceDefaultPrimary {
+    /**
+     * Title field in *CanvasSlider → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: canvas_slider.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *CanvasSlider → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: canvas_slider.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Image URL field in *CanvasSlider → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: canvas_slider.primary.image_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    image_url: prismicT.KeyTextField;
+}
+/**
+ * Item in CanvasSlider → Items
+ *
+ */
+export interface CanvasSliderSliceDefaultItem {
+    /**
+     * Slide Title field in *CanvasSlider → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: canvas_slider.items[].slide_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    slide_title: prismicT.RichTextField;
+    /**
+     * Slide Link field in *CanvasSlider → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: canvas_slider.items[].slide_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    slide_link: prismicT.LinkField;
+}
+/**
+ * Default variation for CanvasSlider Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `CanvasSlider`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CanvasSliderSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CanvasSliderSliceDefaultPrimary>, Simplify<CanvasSliderSliceDefaultItem>>;
+/**
+ * Slice variation for *CanvasSlider*
+ *
+ */
+type CanvasSliderSliceVariation = CanvasSliderSliceDefault;
+/**
+ * CanvasSlider Shared Slice
+ *
+ * - **API ID**: `canvas_slider`
+ * - **Description**: `CanvasSlider`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CanvasSliderSlice = prismicT.SharedSlice<"canvas_slider", CanvasSliderSliceVariation>;
+/**
+ * Primary content in Grid → Primary
  *
  */
 interface GridComponentSliceDefaultPrimary {
     /**
-     * Title field in *GridComponent → Primary*
+     * Title field in *Grid → Primary*
      *
      * - **Field Type**: Title
      * - **Placeholder**: This is where it all begins...
@@ -81,7 +166,7 @@ interface GridComponentSliceDefaultPrimary {
      */
     title: prismicT.TitleField;
     /**
-     * Description field in *GridComponent → Primary*
+     * Description field in *Grid → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: A nice description of your feature
@@ -92,12 +177,22 @@ interface GridComponentSliceDefaultPrimary {
     description: prismicT.RichTextField;
 }
 /**
- * Item in GridComponent → Items
+ * Item in Grid → Items
  *
  */
 export interface GridComponentSliceDefaultItem {
     /**
-     * Title field in *GridComponent → Items*
+     * Image field in *Grid → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Title field in *Grid → Items*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -107,7 +202,7 @@ export interface GridComponentSliceDefaultItem {
      */
     title: prismicT.RichTextField;
     /**
-     * Description field in *GridComponent → Items*
+     * Description field in *Grid → Items*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -117,17 +212,17 @@ export interface GridComponentSliceDefaultItem {
      */
     description: prismicT.RichTextField;
     /**
-     * Button Title field in *GridComponent → Items*
+     * Button Label field in *Grid → Items*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: grid_component.items[].cta_title
+     * - **API ID Path**: grid_component.items[].cta_label
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    cta_title: prismicT.RichTextField;
+    cta_label: prismicT.RichTextField;
     /**
-     * Button Link field in *GridComponent → Items*
+     * Button Link field in *Grid → Items*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
@@ -137,18 +232,18 @@ export interface GridComponentSliceDefaultItem {
      */
     cta_link: prismicT.LinkField;
     /**
-     * Image field in *GridComponent → Items*
+     * Background Color field in *Grid → Items*
      *
-     * - **Field Type**: Image
+     * - **Field Type**: Color
      * - **Placeholder**: *None*
-     * - **API ID Path**: grid_component.items[].image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     * - **API ID Path**: grid_component.items[].background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
      *
      */
-    image: prismicT.ImageField<never>;
+    background_color: prismicT.ColorField;
 }
 /**
- * Default variation for GridComponent Slice
+ * Default variation for Grid Slice
  *
  * - **API ID**: `default`
  * - **Description**: `GridComponent`
@@ -157,12 +252,124 @@ export interface GridComponentSliceDefaultItem {
  */
 export type GridComponentSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<GridComponentSliceDefaultPrimary>, Simplify<GridComponentSliceDefaultItem>>;
 /**
- * Slice variation for *GridComponent*
+ * Primary content in Grid → Primary
  *
  */
-type GridComponentSliceVariation = GridComponentSliceDefault;
+interface GridComponentSliceGridHeroImagePrimary {
+    /**
+     * Title field in *Grid → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: grid_component.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *Grid → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: grid_component.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
 /**
- * GridComponent Shared Slice
+ * Item in Grid → Items
+ *
+ */
+export interface GridComponentSliceGridHeroImageItem {
+    /**
+     * Image field in *Grid → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * Title field in *Grid → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Description field in *Grid → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Button Label field in *Grid → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].cta_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    cta_label: prismicT.RichTextField;
+    /**
+     * Button Link field in *Grid → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+    /**
+     * Background Color field in *Grid → Items*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * Size field in *Grid → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **Default Value**: 1/3
+     * - **API ID Path**: grid_component.items[].size
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    size: prismicT.SelectField<"1/3" | "2/3", "filled">;
+}
+/**
+ * Grid - Hero Image variation for Grid Slice
+ *
+ * - **API ID**: `gridHeroImage`
+ * - **Description**: `GridComponent`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type GridComponentSliceGridHeroImage = prismicT.SharedSliceVariation<"gridHeroImage", Simplify<GridComponentSliceGridHeroImagePrimary>, Simplify<GridComponentSliceGridHeroImageItem>>;
+/**
+ * Slice variation for *Grid*
+ *
+ */
+type GridComponentSliceVariation = GridComponentSliceDefault | GridComponentSliceGridHeroImage;
+/**
+ * Grid Shared Slice
  *
  * - **API ID**: `grid_component`
  * - **Description**: `GridComponent`
@@ -218,13 +425,13 @@ interface HeroBannerSliceDefaultPrimary {
     /**
      * Button Label field in *HeroBanner → Primary*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
      * - **API ID Path**: hero_banner.primary.cta_label
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    cta_label: prismicT.KeyTextField;
+    cta_label: prismicT.RichTextField;
 }
 /**
  * Default variation for HeroBanner Slice
@@ -349,6 +556,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, GridComponentSliceDefaultPrimary, GridComponentSliceDefaultItem, GridComponentSliceDefault, GridComponentSliceVariation, GridComponentSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageSliderSliceDefaultPrimary, ImageSliderSliceDefaultItem, ImageSliderSliceDefault, ImageSliderSliceVariation, ImageSliderSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, CanvasSliderSliceDefaultPrimary, CanvasSliderSliceDefaultItem, CanvasSliderSliceDefault, CanvasSliderSliceVariation, CanvasSliderSlice, GridComponentSliceDefaultPrimary, GridComponentSliceDefaultItem, GridComponentSliceDefault, GridComponentSliceGridHeroImagePrimary, GridComponentSliceGridHeroImageItem, GridComponentSliceGridHeroImage, GridComponentSliceVariation, GridComponentSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageSliderSliceDefaultPrimary, ImageSliderSliceDefaultItem, ImageSliderSliceDefault, ImageSliderSliceVariation, ImageSliderSlice };
     }
 }

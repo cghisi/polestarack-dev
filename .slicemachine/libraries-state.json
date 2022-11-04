@@ -1,15 +1,131 @@
 {
   "slices": {
     "components": {
+      "canvas_slider": {
+        "library": "slices",
+        "id": "canvas_slider",
+        "name": "CanvasSlider",
+        "description": "CanvasSlider",
+        "model": {
+          "id": "canvas_slider",
+          "type": "SharedSlice",
+          "name": "CanvasSlider",
+          "description": "CanvasSlider",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "CanvasSlider",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                },
+                "image_url": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Image URL",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "slide_title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Slide Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "slide_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Slide Link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "slide_title": [
+                  {
+                    "type": "paragraph",
+                    "text": "Voluptate est deserunt irure aute consectetur nulla ullamco sit eu esse aliqua nostrud eiusmod. Pariatur laboris excepteur enim excepteur anim et in.",
+                    "spans": []
+                  }
+                ],
+                "slide_link": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Ground",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Sunt nulla anim tempor nostrud aliqua deserunt cillum. Nostrud tempor ea ipsum voluptate esse. Magna cillum aliqua elit esse mollit anim.",
+                  "spans": []
+                }
+              ],
+              "image_url": "colony"
+            },
+            "slice_type": "canvas_slider"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/christophe/Documents/dev/polestarack/.slicemachine/assets/slices/CanvasSlider/default/preview.png",
+            "width": 800,
+            "height": 481
+          }
+        }
+      },
       "grid_component": {
         "library": "slices",
         "id": "grid_component",
-        "name": "GridComponent",
+        "name": "Grid",
         "description": "GridComponent",
         "model": {
           "id": "grid_component",
           "type": "SharedSlice",
-          "name": "GridComponent",
+          "name": "Grid",
           "description": "GridComponent",
           "variations": [
             {
@@ -37,6 +153,14 @@
                 }
               },
               "items": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
                 "title": {
                   "type": "StructuredText",
                   "config": {
@@ -55,10 +179,10 @@
                     "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 },
-                "cta_title": {
+                "cta_label": {
                   "type": "StructuredText",
                   "config": {
-                    "label": "Button Title",
+                    "label": "Button Label",
                     "placeholder": "",
                     "allowTargetBlank": true,
                     "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
@@ -73,12 +197,102 @@
                     "select": null
                   }
                 },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Background Color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "gridHeroImage",
+              "name": "Grid - Hero Image",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "GridComponent",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {
                 "image": {
                   "type": "Image",
                   "config": {
                     "label": "Image",
                     "constraint": {},
                     "thumbnails": []
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "cta_label": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Button Label",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "cta_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Button Link",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "select": null
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Background Color",
+                    "placeholder": ""
+                  }
+                },
+                "size": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Size",
+                    "placeholder": "",
+                    "options": [
+                      "1/3",
+                      "2/3"
+                    ],
+                    "default_value": "1/3"
                   }
                 }
               },
@@ -92,31 +306,6 @@
             "version": "sktwi1xtmkfgx8626",
             "items": [
               {
-                "title": [
-                  {
-                    "type": "paragraph",
-                    "text": "Lorem aliquip non et aute officia Lorem esse sit occaecat exercitation voluptate.",
-                    "spans": []
-                  }
-                ],
-                "description": [
-                  {
-                    "type": "paragraph",
-                    "text": "Cillum eiusmod tempor occaecat irure et et esse commodo velit labore amet. Occaecat cupidatat laborum adipisicing id ex cillum quis est ea esse ut velit excepteur enim. Ut ullamco pariatur nisi irure excepteur qui proident.",
-                    "spans": []
-                  }
-                ],
-                "cta_title": [
-                  {
-                    "type": "paragraph",
-                    "text": "Deserunt dolore sunt aliqua laboris ipsum. Consequat laborum incididunt ad ad voluptate nostrud eu mollit sint mollit veniam cillum aliquip.",
-                    "spans": []
-                  }
-                ],
-                "cta_link": {
-                  "link_type": "Web",
-                  "url": "https://prismic.io"
-                },
                 "image": {
                   "dimensions": {
                     "width": 900,
@@ -124,22 +313,109 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a"
-                }
+                  "url": "https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab"
+                },
+                "title": [
+                  {
+                    "type": "paragraph",
+                    "text": "Fugiat aliquip nostrud laborum voluptate ad esse pariatur in aliquip est voluptate ipsum adipisicing dolore ut. Duis reprehenderit anim ex adipisicing cillum exercitation ut consectetur. Cillum consectetur excepteur tempor aute incididunt Lorem duis aliqua occaecat irure aute deserunt.",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Irure dolore minim aliquip exercitation in eiusmod veniam adipisicing Lorem irure dolore Lorem.",
+                    "spans": []
+                  }
+                ],
+                "cta_label": [
+                  {
+                    "type": "paragraph",
+                    "text": "Proident cupidatat sunt aliqua veniam eiusmod incididunt ipsum dolor irure voluptate dolor deserunt mollit. Officia sit fugiat dolor et laboris nostrud consequat tempor sunt nisi anim.",
+                    "spans": []
+                  }
+                ],
+                "cta_link": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                },
+                "background_color": "#071ce1"
               }
             ],
             "primary": {
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Worry",
+                  "text": "Sleep",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Enim officia officia irure enim pariatur eu elit ex fugiat elit dolore aliqua. Excepteur nostrud irure officia minim commodo velit eu officia irure aliqua occaecat nulla. Lorem aute ex sint cillum ad id Lorem.",
+                  "text": "Minim occaecat consectetur qui labore et consectetur velit sint eu irure exercitation.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "grid_component"
+          },
+          "gridHeroImage": {
+            "variation": "gridHeroImage",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613"
+                },
+                "title": [
+                  {
+                    "type": "paragraph",
+                    "text": "Nisi id tempor veniam reprehenderit quis id veniam. Tempor exercitation incididunt consectetur est consequat veniam proident commodo pariatur.",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ipsum consequat ut eu qui et consequat labore cillum pariatur nulla tempor mollit anim. Magna anim magna consequat labore fugiat mollit exercitation. Ut officia laboris Lorem enim veniam esse occaecat irure nulla eiusmod aliqua quis nulla tempor duis.",
+                    "spans": []
+                  }
+                ],
+                "cta_label": [
+                  {
+                    "type": "paragraph",
+                    "text": "Deserunt aute sint deserunt id amet mollit ut sunt enim proident consequat amet laboris excepteur eu.",
+                    "spans": []
+                  }
+                ],
+                "cta_link": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                },
+                "background_color": "#252e9d",
+                "size": "1/3"
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Headed",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Exercitation tempor incididunt magna nisi.",
                   "spans": []
                 }
               ]
@@ -151,7 +427,13 @@
           "fileName": "index",
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/christophe/Documents/dev/polestarack/.slicemachine/assets/slices/Grid/default/preview.png",
+            "width": 800,
+            "height": 836
+          }
+        }
       },
       "hero_banner": {
         "library": "slices",
@@ -205,10 +487,12 @@
                   }
                 },
                 "cta_label": {
-                  "type": "Text",
+                  "type": "StructuredText",
                   "config": {
                     "label": "Button Label",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 }
               },
@@ -228,14 +512,14 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Chamber",
+                  "text": "Flies",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Pariatur aliqua do laborum. Minim veniam proident aliquip magna anim minim occaecat aliqua sunt do amet sunt amet aliqua.",
+                  "text": "Officia laboris elit aute enim incididunt do ad do fugiat eiusmod exercitation. Anim quis fugiat minim minim dolor excepteur consectetur consectetur.",
                   "spans": []
                 }
               ],
@@ -248,9 +532,15 @@
               },
               "cta_link": {
                 "link_type": "Web",
-                "url": "https://slicemachine.dev"
+                "url": "http://google.com"
               },
-              "cta_label": "closer"
+              "cta_label": [
+                {
+                  "type": "paragraph",
+                  "text": "Id laboris tempor labore esse occaecat magna cillum duis voluptate reprehenderit anim ullamco officia.",
+                  "spans": []
+                }
+              ]
             },
             "slice_type": "hero_banner"
           }
@@ -261,9 +551,9 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/project/polestarack-dev/.slicemachine/assets/slices/HeroBanner/default/preview.png",
+            "path": "/Users/christophe/Documents/dev/polestarack/.slicemachine/assets/slices/HeroBanner/default/preview.png",
             "width": 800,
-            "height": 102
+            "height": 600
           }
         }
       },

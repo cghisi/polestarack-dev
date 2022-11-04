@@ -1,5 +1,6 @@
 import React from 'react'
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
+import { Button } from "../../components/Button";
 
 /**
  * @typedef {import("@prismicio/client").Content.HeroBannerSlice} HeroBannerSlice
@@ -8,24 +9,26 @@ import { PrismicLink, PrismicRichText } from "@prismicio/react";
  */
 const HeroBanner = ({ slice }) => (
   <section className="relative flex items-center h-screen mb-12 overflow-hidden">
-    
-    <div className="flex flex-col items-start z-30 px-10 text-white">
+    <div className="container mx-auto flex flex-col items-start z-30 text-white">
       {
         slice.primary.title ?
           <PrismicRichText
             field={slice.primary.title}
             components={{
-              heading1: ({ children }) => <h1 className="md:text-2xl text-3xl font-medium  md:mr-5">{children}</h1>,
+              heading1: ({ children }) => <h1 className="md:text-3xl text-3xl py-5 md:mr-5">{children}</h1>,
             }}
           />
           : <h2>Template slice, update me!</h2>
       }
       {
+        slice.primary.description ?
+          <PrismicRichText field={slice.primary.description} />
+          : <p>start by editing this slice from inside Slice Machine!</p>
+      }
+      {
         slice.primary.cta_link ?
-        <PrismicLink field={slice.primary.cta_link}>
-          {slice.primary.cta_label} 
-        </PrismicLink>
-        : <a>Template slice, update me!</a>
+          <Button primary label={slice.primary.cta_label} url={slice.primary.cta_link} height="16px" width="16px" />
+          : <a>Template slice, update me!</a>
       }
     </div>
     {
@@ -34,11 +37,6 @@ const HeroBanner = ({ slice }) => (
           <source src={slice.primary.video.url} type="video/mp4" />
         </video>
         : <div>Video Slice, update me</div>
-    }
-    {
-      slice.primary.description ?
-        <PrismicRichText field={slice.primary.description} />
-        : <p>start by editing this slice from inside Slice Machine!</p>
     }
   </section>
 )

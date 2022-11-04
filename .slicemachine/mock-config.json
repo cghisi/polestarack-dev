@@ -6,14 +6,46 @@
   "slices": {
     "HeroBanner": {
       "default": {
-        "primary": {}
+        "primary": {
+          "cta_label": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "GridComponent": {
       "default": {
-        "items": {}
+        "items": {
+          "cta_label": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
-    "ImageSlider": {}
+    "ImageSlider": {},
+    "CanvasSlider": {},
+    "Grid": {
+      "default": {
+        "items": {
+          "cta_label": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "primary": {}
+      },
+      "gridHeroImage": {
+        "primary": {},
+        "items": {}
+      }
+    }
   }
 }

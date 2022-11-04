@@ -45,10 +45,12 @@
           }
         },
         "cta_label": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Button Label",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
       },

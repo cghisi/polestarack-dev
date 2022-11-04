@@ -1,7 +1,7 @@
 import React from "react";
 import { PrismicRichText } from "@prismicio/react";
 
-import { Slider } from "../../components/Slider";
+//import { Slider } from "../../components/Slider";
 
 /**
  * @typedef {import("@prismicio/client").Content.ImageSliderSlice} ImageSliderSlice

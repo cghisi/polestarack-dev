@@ -77,14 +77,6 @@ export const AnimatedScroll = (props) => {
             updateImage(frameBase, frameIndex - 1, direction)
           );
         }
-      } else if (position < 200) {
-        if (frameIndex > 0) {
-          let max = frameIndex - 1;
-          let min = frameIndex - 100;
-          direction = "rwd";
-
-          requestAnimationFrame(() => updateImage(max, min - 1, direction));
-        }
       }
 
       //requestAnimationFrame(() => updateImage(frameIndex - 1));
