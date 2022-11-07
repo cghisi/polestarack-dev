@@ -241,6 +241,17 @@ export interface GridComponentSliceDefaultItem {
      *
      */
     background_color: prismicT.ColorField;
+    /**
+     * Size field in *Grid → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **Default Value**: 1/3
+     * - **API ID Path**: grid_component.items[].size
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    size: prismicT.SelectField<"1/3" | "2/3" | "1/2", "filled">;
 }
 /**
  * Default variation for Grid Slice
@@ -303,6 +314,16 @@ export interface GridComponentSliceGridHeroImageItem {
      */
     title: prismicT.RichTextField;
     /**
+     * Subtitle field in *Grid → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].subtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    subtitle: prismicT.RichTextField;
+    /**
      * Description field in *Grid → Items*
      *
      * - **Field Type**: Rich Text
@@ -364,10 +385,132 @@ export interface GridComponentSliceGridHeroImageItem {
  */
 export type GridComponentSliceGridHeroImage = prismicT.SharedSliceVariation<"gridHeroImage", Simplify<GridComponentSliceGridHeroImagePrimary>, Simplify<GridComponentSliceGridHeroImageItem>>;
 /**
+ * Primary content in Grid → Primary
+ *
+ */
+interface GridComponentSliceGridWithVideoPrimary {
+    /**
+     * Title field in *Grid → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: grid_component.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *Grid → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: grid_component.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Item in Grid → Items
+ *
+ */
+export interface GridComponentSliceGridWithVideoItem {
+    /**
+     * Video field in *Grid → Items*
+     *
+     * - **Field Type**: Link to Media
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].video
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    video: prismicT.LinkToMediaField;
+    /**
+     * Title field in *Grid → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * Subtitle field in *Grid → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].subtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    subtitle: prismicT.RichTextField;
+    /**
+     * Description field in *Grid → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * Button Label field in *Grid → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].cta_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    cta_label: prismicT.RichTextField;
+    /**
+     * Button Link field in *Grid → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].cta_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    cta_link: prismicT.LinkField;
+    /**
+     * Background Color field in *Grid → Items*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * Size field in *Grid → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **Default Value**: 1/3
+     * - **API ID Path**: grid_component.items[].size
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    size: prismicT.SelectField<"1/3" | "2/3", "filled">;
+}
+/**
+ * Grid - With Video variation for Grid Slice
+ *
+ * - **API ID**: `gridWithVideo`
+ * - **Description**: `GridComponent`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type GridComponentSliceGridWithVideo = prismicT.SharedSliceVariation<"gridWithVideo", Simplify<GridComponentSliceGridWithVideoPrimary>, Simplify<GridComponentSliceGridWithVideoItem>>;
+/**
  * Slice variation for *Grid*
  *
  */
-type GridComponentSliceVariation = GridComponentSliceDefault | GridComponentSliceGridHeroImage;
+type GridComponentSliceVariation = GridComponentSliceDefault | GridComponentSliceGridHeroImage | GridComponentSliceGridWithVideo;
 /**
  * Grid Shared Slice
  *
@@ -556,6 +699,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, CanvasSliderSliceDefaultPrimary, CanvasSliderSliceDefaultItem, CanvasSliderSliceDefault, CanvasSliderSliceVariation, CanvasSliderSlice, GridComponentSliceDefaultPrimary, GridComponentSliceDefaultItem, GridComponentSliceDefault, GridComponentSliceGridHeroImagePrimary, GridComponentSliceGridHeroImageItem, GridComponentSliceGridHeroImage, GridComponentSliceVariation, GridComponentSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageSliderSliceDefaultPrimary, ImageSliderSliceDefaultItem, ImageSliderSliceDefault, ImageSliderSliceVariation, ImageSliderSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, CanvasSliderSliceDefaultPrimary, CanvasSliderSliceDefaultItem, CanvasSliderSliceDefault, CanvasSliderSliceVariation, CanvasSliderSlice, GridComponentSliceDefaultPrimary, GridComponentSliceDefaultItem, GridComponentSliceDefault, GridComponentSliceGridHeroImagePrimary, GridComponentSliceGridHeroImageItem, GridComponentSliceGridHeroImage, GridComponentSliceGridWithVideoPrimary, GridComponentSliceGridWithVideoItem, GridComponentSliceGridWithVideo, GridComponentSliceVariation, GridComponentSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageSliderSliceDefaultPrimary, ImageSliderSliceDefaultItem, ImageSliderSliceDefault, ImageSliderSliceVariation, ImageSliderSlice };
     }
 }

@@ -8,7 +8,7 @@ import { AnimatedScroll } from '../../components/AnimatedScroll'
  * @param { CanvasSliderProps }
  */
 const CanvasSlider = ({ slice }) => (
-  <section className='container mx-auto'>
+  <section className='container mx-auto my-20'>
     <span className="title">
       {
         slice.primary.title ?

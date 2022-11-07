@@ -45,6 +45,9 @@
       "gridHeroImage": {
         "primary": {},
         "items": {}
+      },
+      "gridWithVideo": {
+        "items": {}
       }
     }
   }

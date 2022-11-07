@@ -8,7 +8,7 @@ import { Button } from "../../components/Button";
  * @param { HeroBannerProps }
  */
 const HeroBanner = ({ slice }) => (
-  <section className="relative flex items-center h-screen mb-12 overflow-hidden">
+  <section className="relative flex items-center h-screen mb-20 overflow-hidden">
     <div className="container mx-auto flex flex-col items-start z-30 text-white">
       {
         slice.primary.title ?
@@ -32,7 +32,7 @@ const HeroBanner = ({ slice }) => (
       }
     </div>
     {
-      slice.primary.video ?
+      slice.primary.video.url ?
         <video width="320" height="240" loop muted autoPlay className='absolute z-10 w-auto min-w-full min-h-full max-w-none'>
           <source src={slice.primary.video.url} type="video/mp4" />
         </video>
