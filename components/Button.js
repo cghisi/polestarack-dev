@@ -1,5 +1,5 @@
 import React from "react";
-import { PrismicLink, PrismicText } from "@prismicio/react";
+import { PrismicLink, PrismicRichText } from "@prismicio/react";
 import Image from 'next/image'
 
 export const Button = ({ primary, color, size, label, url, width, height, ...props }) => {
@@ -7,10 +7,14 @@ export const Button = ({ primary, color, size, label, url, width, height, ...pro
         ? "flex gap-2"
         : "flex gap-2";
 
-    if (url) {
+        console.log(label);    
+        if (url) {
         return (
-            <PrismicLink field={url} className={[`btn--${size}`, mode].join(" ")}>
-                <span><PrismicText field={label} /></span>
+            <PrismicLink field={url} className={mode}>
+                <PrismicRichText field={label} components={{
+                    heading3: ({ children }) => <span className="text-2xl">{children}</span>,
+                    paragraph: ({ children }) => <span>{children}</span>,
+                }} />
                 <Image
                     src="/arrow.svg"
                     alt="Picture of the author"

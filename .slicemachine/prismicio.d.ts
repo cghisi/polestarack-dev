@@ -35,6 +35,56 @@ type HomepageDocumentDataSlicesSlice = HeroBannerSlice | GridComponentSlice | Ca
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomepageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomepageDocumentData>, "homepage", Lang>;
+/** Content for navigation documents */
+interface NavigationDocumentData {
+    /**
+     * Items field in *navigation*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.items[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    items: prismicT.GroupField<Simplify<NavigationDocumentDataItemsItem>>;
+}
+/**
+ * Item in navigation → Items
+ *
+ */
+export interface NavigationDocumentDataItemsItem {
+    /**
+     * Label field in *navigation → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.items[].label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    label: prismicT.RichTextField;
+    /**
+     * url field in *navigation → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.items[].url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    url: prismicT.LinkField;
+}
+/**
+ * navigation document from Prismic
+ *
+ * - **API ID**: `navigation`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
 /** Content for page documents */
 interface PageDocumentData {
     /**
@@ -64,7 +114,7 @@ type PageDocumentDataSlicesSlice = HeroBannerSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = HomepageDocument | PageDocument;
+export type AllDocumentTypes = HomepageDocument | NavigationDocument | PageDocument;
 /**
  * Primary content in CanvasSlider → Primary
  *
@@ -577,6 +627,32 @@ interface HeroBannerSliceDefaultPrimary {
     cta_label: prismicT.RichTextField;
 }
 /**
+ * Item in HeroBanner → Items
+ *
+ */
+export interface HeroBannerSliceDefaultItem {
+    /**
+     * Label field in *HeroBanner → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.items[].label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    label: prismicT.RichTextField;
+    /**
+     * url field in *HeroBanner → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_banner.items[].url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    url: prismicT.LinkField;
+}
+/**
  * Default variation for HeroBanner Slice
  *
  * - **API ID**: `default`
@@ -584,7 +660,7 @@ interface HeroBannerSliceDefaultPrimary {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type HeroBannerSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeroBannerSliceDefaultPrimary>, never>;
+export type HeroBannerSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeroBannerSliceDefaultPrimary>, Simplify<HeroBannerSliceDefaultItem>>;
 /**
  * Slice variation for *HeroBanner*
  *
@@ -699,6 +775,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, CanvasSliderSliceDefaultPrimary, CanvasSliderSliceDefaultItem, CanvasSliderSliceDefault, CanvasSliderSliceVariation, CanvasSliderSlice, GridComponentSliceDefaultPrimary, GridComponentSliceDefaultItem, GridComponentSliceDefault, GridComponentSliceGridHeroImagePrimary, GridComponentSliceGridHeroImageItem, GridComponentSliceGridHeroImage, GridComponentSliceGridWithVideoPrimary, GridComponentSliceGridWithVideoItem, GridComponentSliceGridWithVideo, GridComponentSliceVariation, GridComponentSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageSliderSliceDefaultPrimary, ImageSliderSliceDefaultItem, ImageSliderSliceDefault, ImageSliderSliceVariation, ImageSliderSlice };
+        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataItemsItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, CanvasSliderSliceDefaultPrimary, CanvasSliderSliceDefaultItem, CanvasSliderSliceDefault, CanvasSliderSliceVariation, CanvasSliderSlice, GridComponentSliceDefaultPrimary, GridComponentSliceDefaultItem, GridComponentSliceDefault, GridComponentSliceGridHeroImagePrimary, GridComponentSliceGridHeroImageItem, GridComponentSliceGridHeroImage, GridComponentSliceGridWithVideoPrimary, GridComponentSliceGridWithVideoItem, GridComponentSliceGridWithVideo, GridComponentSliceVariation, GridComponentSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageSliderSliceDefaultPrimary, ImageSliderSliceDefaultItem, ImageSliderSliceDefault, ImageSliderSliceVariation, ImageSliderSlice };
     }
 }

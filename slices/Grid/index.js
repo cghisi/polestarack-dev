@@ -54,11 +54,11 @@ const GridComponent = ({ slice }) => {
               <div className={(slice.variation === 'gridHeroImage') && (item.image.url) ? "absolute z-10 mt-2 px-5 w-5/12" : "h-full mt-2 px-5"}>
                 <PrismicRichText field={item.subtitle} />
                 <PrismicRichText field={item.title} components={{
-                  heading2: ({ children }) => <h2 className="text-2xl mb-5">{children}</h2>,
+                  heading2: ({ children }) => <h2 className="text-2xl mb-5 font-medium">{children}</h2>,
                 }} />
                 <PrismicRichText field={item.description} />
               </div>
-              <div className={(slice.variation === 'gridHeroImage') ? "absolute bottom-5 left-5" : "mt-2 px-5"}>
+              <div className={(slice.variation === 'gridHeroImage') ? "absolute bottom-5 left-5" : "px-5"}>
                 <Button primary label={item.cta_label} url={item.cta_link} height="20px" width="20px" />
               </div>
             </div>);

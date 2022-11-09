@@ -1,19 +1,51 @@
 import React from "react";
 import NextLink from "next/link";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+
+import Navigation from "./Navigation";
 
 const Header = ({ navigation }) => {
+  
+  const [clientWindowHeight, setClientWindowHeight] = useState("");
+
+  const [backgroundTransparacy, setBackgroundTransparacy] = useState(0);
+  const [textColor, setTextColor] = useState(0);
+  const [boxShadow, setBoxShadow] = useState(0);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  });
+
+  const handleScroll = () => {
+    setClientWindowHeight(window.scrollY);
+  };
+
+  useEffect(() => {
+    let backgroundTransparacyVar = clientWindowHeight / 600;
+    if (backgroundTransparacyVar < 1) {
+      let boxShadowVar = backgroundTransparacyVar * 0.1;
+      setBackgroundTransparacy(backgroundTransparacyVar);
+      setBoxShadow(boxShadowVar);
+      setTextColor("#fff")
+    }else{
+      setTextColor("#000")
+    }
+  }, [clientWindowHeight]);
+
+
   return (
-    <header
-      style={{
-        backgroundColor: navigation.data.background,
-      }}
-    >
-      <div className="flex container mx-auto">
-        <div className="flex items-center py-6 sm:w-1/3 md:w-2/5">
-          <NextLink href={"/"} passHref>
-            <a>
-              <Image src="/polestar.png" alt="Polestar" width={110} height={42} />
+    <header>
+      <div className="inset-x-0 mx-auto fixed z-30 text-white" style={{
+        background: `rgba(255, 255, 255, ${backgroundTransparacy})`,
+        boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
+        color: `${textColor}`
+      }}>
+        <div className="container mx-auto flex justify-between items-center py-6" >
+          <Navigation navigation={navigation} />
+          <NextLink href={"/"} passHref className="w-1/3">
+            <a className="text-3xl text-right">
+              Polestar
             </a>
           </NextLink>
         </div>
