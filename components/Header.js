@@ -36,12 +36,12 @@ const Header = ({ navigation }) => {
 
   return (
     <header>
-      <div className="inset-x-0 mx-auto sm:px-5 fixed z-30 text-white" style={{
+      <div className="inset-x-0 mx-auto fixed z-30 text-white" style={{
         background: `rgba(255, 255, 255, ${backgroundTransparacy})`,
         boxShadow: `rgb(0 0 0 / ${boxShadow}) 0px 0px 20px 6px`,
         color: `${textColor}`
       }}>
-        <div className="container mx-auto flex justify-between items-center py-6" >
+        <div className="container mx-auto px-5 flex justify-between items-center py-6" >
           <Navigation navigation={navigation} />
           <NextLink href={"/"} passHref className="w-1/3">
             <a className="text-3xl text-right">
