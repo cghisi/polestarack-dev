@@ -30,7 +30,7 @@ const HeroBanner = ({ slice }) => (
           <Button primary label={slice.primary.cta_label} url={slice.primary.cta_link} height="16px" width="16px" />
           : <a>Template slice, update me!</a>
       }
-      <div className='absolute bottom-20 flex gap-10'>
+      <div className='absolute bottom-20 md:flex gap-10'>
         {
           slice.items.map((item, i) => {
             return (<Button primary label={item.label} url={item.url} height="20px" width="20px" key={i}/>)
