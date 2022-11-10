@@ -9,7 +9,7 @@ import { Button } from "../../components/Button";
  */
 const HeroBanner = ({ slice }) => (
   <section className="relative flex items-center h-screen mb-20 overflow-hidden">
-    <div className="container mx-auto flex flex-col items-start z-20 text-white">
+    <div className="container mx-auto px-5 flex flex-col items-start z-20 text-white">
       {
         slice.primary.title ?
           <PrismicRichText
