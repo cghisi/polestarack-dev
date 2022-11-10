@@ -10,7 +10,7 @@ import { Button } from "../../components/Button";
 const GridComponent = ({ slice }) => {
 
   return (
-    <section className="container mx-auto my-20">
+    <section className="container mx-auto md:my-20 my-10">
       {slice.primary.title ? (
         <PrismicRichText field={slice.primary.title} components={{
           heading1: ({ children }) => <h1 className="px-5 text-3xl mb-5">{children}</h1>,
