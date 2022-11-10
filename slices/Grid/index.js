@@ -30,13 +30,13 @@ const GridComponent = ({ slice }) => {
             let gridValue = '';
             switch (item.size) {
               case '1/3':
-                gridValue = 'w-1/3';
+                gridValue = 'md:w-1/3';
                 break;
               case '2/3':
-                gridValue = 'w-2/3';
+                gridValue = 'md:w-2/3';
                 break;
               default:
-                gridValue = 'w-1/2';
+                gridValue = 'md:w-1/2';
             }
 
             return (<div key={i} className={(slice.variation === 'gridHeroImage') ? "relative flex flex-col " + gridValue : "flex flex-col " + gridValue}
