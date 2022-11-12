@@ -165,3 +165,11 @@ img{
 .nav-container input[type="checkbox"]:checked ~ .logo{
   display: none;
 }
+
+.custom-pointer-left:hover {
+  cursor: url("/left-arrow.svg"), auto;
+}
+
+.custom-pointer-right:hover {
+  cursor: url("/right-arrow.svg"), auto;
+}

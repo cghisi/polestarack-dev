@@ -8,7 +8,6 @@ const AnimatedImage = (image_url, props) => {
     const [locations, setLocations] = React.useState([]);
 
     useEffect(() => {
-
         const image = new Image();
         const frameCount = 399;
         const currentFrame = (index) =>
@@ -74,24 +73,24 @@ const AnimatedImage = (image_url, props) => {
     }
 
     function handleCanvasClick(e) {
-        console.log('clcikc')
 
         const newLocation = { x: e.clientX, y: e.clientY };
+        console.log('clcikc')
         setLocations([...locations, newLocation]);
     }
 
     return (
-        <div>
-            <p>you clicked {frameIndex} times {direction}</p>
-            <canvas ref={canvasRef} {...props} onClick={handleCanvasClick} />
-            <div className="flex justify-between">
-                <button onClick={() => handleClick('rwd')} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Button RWD
+        <div className="relative flex items-center h-screen mb-20 overflow-hidden">
+            
+            <div className="flex h-full w-full justify-between z-20">
+                <button onClick={() => handleClick('rwd')} className="custom-pointer-left text-transparent w-1/4">
+                    Previous Image
                 </button>
-                <button onClick={() => handleClick('fwd')} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Button FWD
+                <button onClick={() => handleClick('fwd')} className="custom-pointer-right text-transparent w-1/4">
+                    Next Image
                 </button>
             </div>
+            <canvas ref={canvasRef} {...props} onClick={handleCanvasClick} className='absolute z-10 w-auto min-w-full min-h-full max-w-none'/>
         </div>
     );
 }

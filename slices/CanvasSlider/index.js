@@ -1,7 +1,7 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
 import { AnimatedScroll } from '../../components/AnimatedScroll'
-import AnimatedImage  from '../../components/AnimatedImage'
+import AnimatedImage from '../../components/AnimatedImage'
 
 /**
  * @typedef {import("@prismicio/client").Content.CanvasSliderSlice} CanvasSliderSlice
@@ -23,12 +23,14 @@ const CanvasSlider = ({ slice }) => {
           <PrismicRichText field={slice.primary.description} />
           : <p>start by editing this slice from inside Slice Machine!</p>
       }
-      <AnimatedImage image_url={slice.primary.image_url} width="1900" height="1000"/>
-      {/* <div className="hidden md:block">
-        <AnimatedScroll image_url={slice.primary.image_url} width="1900" height="1000" /> 
+
+      <div className="hidden md:block">
+        <AnimatedImage image_url={slice.primary.image_url} width="1900" height="1000" />
       </div>
-      <div className="block md:hidden"><AnimatedScroll image_url={slice.primary.mobile_image_url} width="1080" height="1080" /></div>
-     */}
+      <div className="block md:hidden">
+        <AnimatedImage image_url={slice.primary.mobile_image_url} width="1080" height="1080" />
+      </div>
+
     </section>
   );
 }
