@@ -41,6 +41,13 @@
                     "label": "Image URL",
                     "placeholder": ""
                   }
+                },
+                "mobile_image_url": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Mobile Image URL",
+                    "placeholder": ""
+                  }
                 }
               },
               "items": {
@@ -75,13 +82,13 @@
                 "slide_title": [
                   {
                     "type": "paragraph",
-                    "text": "Voluptate est deserunt irure aute consectetur nulla ullamco sit eu esse aliqua nostrud eiusmod. Pariatur laboris excepteur enim excepteur anim et in.",
+                    "text": "Dolore reprehenderit qui id duis laboris ut esse consectetur officia deserunt non veniam aliqua consectetur. Mollit enim et proident proident nisi quis sit qui sint anim in irure.",
                     "spans": []
                   }
                 ],
                 "slide_link": {
                   "link_type": "Web",
-                  "url": "http://twitter.com"
+                  "url": "http://google.com"
                 }
               }
             ],
@@ -89,18 +96,19 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Ground",
+                  "text": "Pitch",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Sunt nulla anim tempor nostrud aliqua deserunt cillum. Nostrud tempor ea ipsum voluptate esse. Magna cillum aliqua elit esse mollit anim.",
+                  "text": "Ipsum eiusmod ea proident enim esse commodo velit id laboris. Aliqua tempor eiusmod voluptate eu voluptate irure culpa in cupidatat sint. Officia eu proident velit enim aute amet incididunt ipsum adipisicing.",
                   "spans": []
                 }
               ],
-              "image_url": "colony"
+              "image_url": "perfect",
+              "mobile_image_url": "water"
             },
             "slice_type": "canvas_slider"
           }

@@ -150,6 +150,16 @@ interface CanvasSliderSliceDefaultPrimary {
      *
      */
     image_url: prismicT.KeyTextField;
+    /**
+     * Mobile Image URL field in *CanvasSlider → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: canvas_slider.primary.mobile_image_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    mobile_image_url: prismicT.KeyTextField;
 }
 /**
  * Item in CanvasSlider → Items

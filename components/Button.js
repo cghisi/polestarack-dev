@@ -6,8 +6,7 @@ export const Button = ({ primary, color, size, label, url, width, height, ...pro
     const mode = primary
         ? "flex gap-2"
         : "flex gap-2";
-
-        console.log(label);    
+ 
         if (url) {
         return (
             <PrismicLink field={url} className={mode}>

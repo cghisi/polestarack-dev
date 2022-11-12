@@ -1,13 +1,14 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 
-export const AnimatedScroll = (props) => {
+export const AnimatedScroll = (image_url, width, height, props) => {
   const canvasRef = useRef(null);
+  const setCount = useState(0);
 
   useEffect(() => {
     const image = new Image();
     const frameCount = 399;
     const currentFrame = (index) =>
-      `https://www.polestar.com/www-images/home-car-carousel/car-sequence/desktop/ps6-precept-ps3-my23ps2-ps1/${index
+      `${image_url.image_url}${index
         .toString()
         .padStart(3, "0")}.jpg`;
 
@@ -19,18 +20,23 @@ export const AnimatedScroll = (props) => {
     };
 
     image.src = currentFrame(1);
+    console.log(image_url)
 
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
 
     canvas.id = 1;
-    canvas.width = 1900;
-    canvas.height = 1080;
+    canvas.width = image_url.width;
+    canvas.height = image_url.height;
 
     image.onload = () => {
       context.drawImage(image, 0, 0);
     };
 
+    const handleClick = () => {
+      console.log('increment like count');
+    }
+    
     const updateImage = (index, max, direction) => {
       image.src = currentFrame(index);
       context.drawImage(image, 0, 0);
@@ -85,8 +91,10 @@ export const AnimatedScroll = (props) => {
     preloadImages();
   }, []);
 
+  
+
   return (
-    <div className="test">
+    <div>
       <canvas ref={canvasRef} {...props} />
     </div>
   );

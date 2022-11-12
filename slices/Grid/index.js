@@ -1,5 +1,6 @@
 import React from "react";
 import { PrismicRichText } from "@prismicio/react";
+import { PrismicNextImage } from '@prismicio/next'
 import { Button } from "../../components/Button";
 
 /**
@@ -39,12 +40,10 @@ const GridComponent = ({ slice }) => {
                 gridValue = 'w-1/2';
             }
 
-            return (<div key={i} className={(slice.variation === 'gridHeroImage') ? "relative flex flex-col " + gridValue : "flex flex-col " + gridValue}
+            return (<div key={i} className={(slice.variation === 'gridHeroImage') ? "relative flex flex-col " + gridValue : "flex flex-col h-full " + gridValue}
               style={{ backgroundColor: item.background_color, }} >
               {item.image ? (
-                <div>
-                  <img src={item.image.url} alt={item.image.alt} />
-                </div>
+                  <PrismicNextImage field={item.image} layout="responsive"/>
               ) : ""}
               {(slice.variation === 'gridWithVideo') && (item.video.url) ? (
                 <video width="320" height="240" loop muted autoPlay className='w-auto min-w-full min-h-full max-w-none'>

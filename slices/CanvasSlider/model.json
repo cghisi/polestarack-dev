@@ -33,6 +33,13 @@
             "label": "Image URL",
             "placeholder": ""
           }
+        },
+        "mobile_image_url": {
+          "type": "Text",
+          "config": {
+            "label": "Mobile Image URL",
+            "placeholder": ""
+          }
         }
       },
       "items": {
