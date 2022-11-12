@@ -11,10 +11,10 @@ import { Button } from "../../components/Button";
 const GridComponent = ({ slice }) => {
 
   return (
-    <section className="container mx-auto my-20">
+    <section className="container mx-auto md:my-20 my-10">
       {slice.primary.title ? (
         <PrismicRichText field={slice.primary.title} components={{
-          heading1: ({ children }) => <h1 className="text-3xl mb-5">{children}</h1>,
+          heading1: ({ children }) => <h1 className="px-5 text-3xl mb-5">{children}</h1>,
         }} />
       ) : (
         <h1>Template slice, update me!</h1>
@@ -31,13 +31,13 @@ const GridComponent = ({ slice }) => {
             let gridValue = '';
             switch (item.size) {
               case '1/3':
-                gridValue = 'w-1/3';
+                gridValue = 'md:w-1/3 mb-5';
                 break;
               case '2/3':
-                gridValue = 'w-2/3';
+                gridValue = 'md:w-2/3 mb-5';
                 break;
               default:
-                gridValue = 'w-1/2';
+                gridValue = 'md:w-1/2 mb-5';
             }
 
             return (<div key={i} className={(slice.variation === 'gridHeroImage') ? "relative flex flex-col " + gridValue : "flex flex-col h-full " + gridValue}

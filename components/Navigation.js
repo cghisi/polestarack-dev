@@ -38,7 +38,7 @@ class Navigation extends Component {
           </svg>
         </button>
         <nav className={`${isExpanded ? "flex" : "hidden"}`}>
-          <aside className="transform top-0 left-0 w-2/6 bg-black fixed h-full overflow-auto ease-in-out z-40">
+          <aside className="transform top-0 left-0 md:w-2/6 bg-black fixed h-full overflow-auto ease-in-out z-40">
             <div
               className="flex w-full items-center p-4"
               onClick={(e) => this.handleToggle(e)}

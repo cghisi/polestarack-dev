@@ -9,7 +9,7 @@ import { Button } from "../../components/Button";
  */
 const HeroBanner = ({ slice }) => (
   <section className="relative flex items-center h-screen mb-20 overflow-hidden">
-    <div className="container mx-auto flex flex-col items-start z-20 text-white">
+    <div className="container mx-auto px-5 flex flex-col items-start z-20 text-white">
       {
         slice.primary.title ?
           <PrismicRichText
@@ -30,7 +30,7 @@ const HeroBanner = ({ slice }) => (
           <Button primary label={slice.primary.cta_label} url={slice.primary.cta_link} height="16px" width="16px" />
           : <a>Template slice, update me!</a>
       }
-      <div className='absolute bottom-20 flex gap-10'>
+      <div className='absolute bottom-20 md:flex gap-10'>
         {
           slice.items.map((item, i) => {
             return (<Button primary label={item.label} url={item.url} height="20px" width="20px" key={i}/>)
