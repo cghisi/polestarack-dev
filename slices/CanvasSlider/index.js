@@ -25,7 +25,7 @@ const CanvasSlider = ({ slice }) => {
       }
 
       <div className="hidden md:block">
-        <AnimatedImage image_url={slice.primary.image_url} width="1900" height="1000" />
+        <AnimatedImage image_url={slice.primary.image_url} width="1900" height="1080" />
       </div>
       <div className="block md:hidden">
         <AnimatedImage image_url={slice.primary.mobile_image_url} width="1080" height="1080" />

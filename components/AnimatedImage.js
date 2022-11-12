@@ -90,7 +90,7 @@ const AnimatedImage = (image_url, props) => {
                     Next Image
                 </button>
             </div>
-            <canvas ref={canvasRef} {...props} onClick={handleCanvasClick} className='absolute z-10 w-auto min-w-full min-h-full max-w-none'/>
+            <canvas ref={canvasRef} {...props} onClick={handleCanvasClick} className='absolute z-10 min-w-full max-w-none'/>
         </div>
     );
 }
