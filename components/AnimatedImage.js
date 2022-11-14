@@ -80,8 +80,7 @@ const AnimatedImage = (image_url, props) => {
     }
 
     return (
-        <div className="relative flex items-center h-screen mb-20 overflow-hidden">
-            
+        <div className="relative flex flex-col items-center h-[25rem] md:h-[56rem] mb-20 overflow-hidden">
             <div className="flex h-full w-full justify-between z-20">
                 <button onClick={() => handleClick('rwd')} className="custom-pointer-left text-transparent w-1/4">
                     Previous Image
@@ -90,7 +89,9 @@ const AnimatedImage = (image_url, props) => {
                     Next Image
                 </button>
             </div>
-            <canvas ref={canvasRef} {...props} onClick={handleCanvasClick} className='absolute z-10 min-w-full max-w-none'/>
+            <div className='absolute z-10 min-w-full max-w-none'>
+                <canvas ref={canvasRef} {...props} onClick={handleCanvasClick} />
+            </div>
         </div>
     );
 }

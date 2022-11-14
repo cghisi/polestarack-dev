@@ -24,7 +24,7 @@ const CanvasSlider = ({ slice }) => {
           : <p>start by editing this slice from inside Slice Machine!</p>
       }
 
-      <div className="hidden md:block">
+      <div className="md:block hidden">
         <AnimatedImage image_url={slice.primary.image_url} width="1900" height="1080" />
       </div>
       <div className="block md:hidden">

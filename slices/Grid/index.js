@@ -31,16 +31,16 @@ const GridComponent = ({ slice }) => {
             let gridValue = '';
             switch (item.size) {
               case '1/3':
-                gridValue = 'md:w-1/3 mb-5';
+                gridValue = 'md:w-1/3 md:mb-5';
                 break;
               case '2/3':
-                gridValue = 'md:w-2/3 mb-5';
+                gridValue = 'md:w-2/3 md:mb-5';
                 break;
               default:
-                gridValue = 'md:w-1/2 mb-5';
+                gridValue = 'md:w-1/2 md:mb-5';
             }
 
-            return (<div key={i} className={(slice.variation === 'gridHeroImage') ? "relative flex flex-col " + gridValue : "flex flex-col h-full " + gridValue}
+            return (<div key={i} className={(slice.variation === 'gridHeroImage') ? "relative flex flex-col h-64 md:h-full" + gridValue : "flex flex-col h-full " + gridValue}
               style={{ backgroundColor: item.background_color, }} >
               {item.image ? (
                   <PrismicNextImage field={item.image} layout="responsive"/>
@@ -50,7 +50,7 @@ const GridComponent = ({ slice }) => {
                   <source src={item.video.url} type="video/mp4" />
                 </video>
               ) : ""}
-              <div className={(slice.variation === 'gridHeroImage') && (item.image.url) ? "absolute z-10 mt-2 px-5 w-5/12" : "h-full mt-2 px-5"}>
+              <div className={(slice.variation === 'gridHeroImage') && (item.image.url) ? "absolute z-10 mt-2 px-5 md:w-5/12" : "h-full mt-2 px-5"}>
                 <PrismicRichText field={item.subtitle} />
                 <PrismicRichText field={item.title} components={{
                   heading2: ({ children }) => <h2 className="text-2xl mb-5 font-medium">{children}</h2>,
