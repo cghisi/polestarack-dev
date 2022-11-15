@@ -250,7 +250,7 @@ export interface GridComponentSliceDefaultItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    image: prismicT.ImageField<never>;
+    image: prismicT.ImageField<"mobile">;
     /**
      * Title field in *Grid → Items*
      *
@@ -362,7 +362,7 @@ export interface GridComponentSliceGridHeroImageItem {
      * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    image: prismicT.ImageField<never>;
+    image: prismicT.ImageField<"mobile">;
     /**
      * Title field in *Grid → Items*
      *

@@ -34,7 +34,13 @@
           "config": {
             "label": "Image",
             "constraint": {},
-            "thumbnails": []
+            "thumbnails": [
+              {
+                "name": "mobile",
+                "width": 400,
+                "height": 400
+              }
+            ]
           }
         },
         "title": {
@@ -126,7 +132,13 @@
           "config": {
             "label": "Image",
             "constraint": {},
-            "thumbnails": []
+            "thumbnails": [
+              {
+                "name": "mobile",
+                "width": 450,
+                "height": 450
+              }
+            ]
           }
         },
         "title": {

@@ -80,17 +80,17 @@ const AnimatedImage = (image_url, props) => {
     }
 
     return (
-        <div className="relative flex flex-col items-center h-[25rem] md:h-[56rem] mb-20 overflow-hidden">
-            <div className="flex h-full w-full justify-between z-20">
-                <button onClick={() => handleClick('rwd')} className="custom-pointer-left text-transparent w-1/4">
-                    Previous Image
-                </button>
-                <button onClick={() => handleClick('fwd')} className="custom-pointer-right text-transparent w-1/4">
-                    Next Image
-                </button>
-            </div>
-            <div className='absolute z-10 min-w-full max-w-none'>
-                <canvas ref={canvasRef} {...props} onClick={handleCanvasClick} />
+        <div className="relative">
+            <canvas ref={canvasRef} {...props} onClick={handleCanvasClick} />
+            <div className="absolute z-20 h-full w-full top-0">
+                <div className="flex h-full justify-between">
+                    <button onClick={() => handleClick('rwd')} className="h-full custom-pointer-left text-transparent w-1/4">
+                        Previous Image
+                    </button>
+                    <button onClick={() => handleClick('fwd')} className="h-full custom-pointer-right text-transparent w-1/4">
+                        Next Image
+                    </button>
+                </div>
             </div>
         </div>
     );
