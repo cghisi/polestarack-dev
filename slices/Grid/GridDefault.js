@@ -24,7 +24,7 @@ const GridDefault = ({ slice }) => {
       ) : (
         <p>start by editing this slice from inside Slice Machine!</p>
       )}
-      <div className="flex gap-x-5 pt-2">
+      <div className="flex flex-col md:flex-row gap-x-5 pt-2">
         {slice.items.map((item, i) => {
           let gridValue = "";
           switch (item.size) {
@@ -41,7 +41,7 @@ const GridDefault = ({ slice }) => {
           return (
             <div
               key={i}
-              className={"flex flex-col h-full " + gridValue}
+              className={gridValue}
               style={{ backgroundColor: item.background_color }}
             >
               {item.image ? (
