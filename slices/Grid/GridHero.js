@@ -25,7 +25,7 @@ const GridHero = ({ slice }) => {
         <p>start by editing this slice from inside Slice Machine!</p>
       )}
 
-      <div className="flex overflow-x-scroll flex-row gap-x-5">
+      <div className="flex flex-col md:flex-row gap-x-5">
         {slice.items.map((item, i) => {
           let gridValue = "";
           switch (item.size) {
@@ -42,10 +42,14 @@ const GridHero = ({ slice }) => {
           return (
             <div
               key={i}
-              className={"relative " + gridValue}
+              className={
+                item.image.url !== undefined
+                  ? "relative " + gridValue
+                  : "md:relative h-64 md:h-auto " + gridValue
+              }
               style={{ backgroundColor: item.background_color }}
             >
-              {item.image ? (
+              {item.image.url !== undefined ? (
                 <div>
                   <PrismicNextImage
                     field={item.image}
@@ -56,7 +60,13 @@ const GridHero = ({ slice }) => {
               ) : (
                 ""
               )}
-              <div className="absolute top-0 left-0 mt-2 px-5">
+              <div
+                className={
+                  item.image.url !== undefined
+                    ? "absolute top-0 left-0 mt-2 px-5 "
+                    : "md:absolute top-0 left-0 mt-2 px-5 h-64 md:h-auto"
+                }
+              >
                 <PrismicRichText field={item.subtitle} />
                 <PrismicRichText
                   field={item.title}
@@ -68,7 +78,13 @@ const GridHero = ({ slice }) => {
                 />
                 <PrismicRichText field={item.description} />
               </div>
-              <div className="absolute bottom-5 left-5">
+              <div
+                className={
+                  item.image.url !== undefined
+                    ? "absolute bottom-5 left-5 "
+                    : "md:absolute md:bottom-5 md:left-5 p-5 md:p-0"
+                }
+              >
                 <Button
                   primary
                   label={item.cta_label}
@@ -80,27 +96,6 @@ const GridHero = ({ slice }) => {
             </div>
           );
         })}
-      </div>
-      <div className="flex overflow-x-scroll pb-10 hide-scroll-bar">
-        <div className="flex flex-nowrap">
-          {slice.items.map((item, i) => {
-            return (
-              <div key={i} className="w-1/2 inline-block px-3">
-                <div className="w-64 h-full max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out">
-                  {item.image ? (
-                    <PrismicNextImage
-                      field={item.image}
-                      layout="responsive"
-                      alt={item.image.alt}
-                    />
-                  ) : (
-                    ""
-                  )}
-                </div>
-              </div>
-            );
-          })}
-        </div>
       </div>
     </section>
   );

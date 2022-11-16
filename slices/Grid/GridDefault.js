@@ -53,7 +53,7 @@ const GridDefault = ({ slice }) => {
               ) : (
                 ""
               )}
-              <div className="h-full mt-2 px-5">
+              <div className="mt-2 px-5">
                 <PrismicRichText field={item.subtitle} />
                 <PrismicRichText
                   field={item.title}
