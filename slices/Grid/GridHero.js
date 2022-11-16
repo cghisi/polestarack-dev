@@ -25,15 +25,15 @@ const GridHero = ({ slice }) => {
         <p>start by editing this slice from inside Slice Machine!</p>
       )}
 
-      <div className="grid grid-flow-col gap-4">
+      <div className="flex overflow-x-scroll flex-row gap-x-5">
         {slice.items.map((item, i) => {
           let gridValue = "";
           switch (item.size) {
             case "1/3":
-              gridValue = "";
+              gridValue = "md:w-1/3 w-full";
               break;
             case "2/3":
-              gridValue = "col-span-2";
+              gridValue = "md:w-2/3 w-full";
               break;
             default:
               gridValue = "";
@@ -80,6 +80,27 @@ const GridHero = ({ slice }) => {
             </div>
           );
         })}
+      </div>
+      <div className="flex overflow-x-scroll pb-10 hide-scroll-bar">
+        <div className="flex flex-nowrap">
+          {slice.items.map((item, i) => {
+            return (
+              <div key={i} className="w-1/2 inline-block px-3">
+                <div className="w-64 h-64 max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out">
+                  {item.image ? (
+                    <PrismicNextImage
+                      field={item.image}
+                      layout="responsive"
+                      alt={item.image.alt}
+                    />
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
