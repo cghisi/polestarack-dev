@@ -86,7 +86,7 @@ const GridHero = ({ slice }) => {
           {slice.items.map((item, i) => {
             return (
               <div key={i} className="w-1/2 inline-block px-3">
-                <div className="w-64 h-64 max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out">
+                <div className="w-64 h-full max-w-xs overflow-hidden transition-shadow duration-300 ease-in-out">
                   {item.image ? (
                     <PrismicNextImage
                       field={item.image}
