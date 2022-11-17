@@ -1,0 +1,120 @@
+{
+  "id": "settings",
+  "label": "settings",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "UID",
+          "placeholder": ""
+        }
+      },
+      "newsletter_title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Newsletter Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "newsletter_description": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Newsletter Description",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "newsletter_link_label": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Newsletter Link Label",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "newsletter_link": {
+        "type": "Link",
+        "config": {
+          "label": "Newsletter Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "column_1": {
+        "type": "Group",
+        "config": {
+          "label": "Column 1",
+          "fields": {
+            "link_label": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Link Label",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "link_url": {
+              "type": "Link",
+              "config": {
+                "label": "Link URL",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "header": {
+              "type": "Boolean",
+              "config": {
+                "label": "Header",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            }
+          }
+        }
+      },
+      "column_2": {
+        "type": "Group",
+        "config": {
+          "label": "Column 2",
+          "fields": {
+            "link_label": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Link Label",
+                "placeholder": "",
+                "allowTargetBlank": true,
+                "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+              }
+            },
+            "link_url": {
+              "type": "Link",
+              "config": {
+                "label": "Link URL",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "header": {
+              "type": "Boolean",
+              "config": {
+                "label": "Header",
+                "default_value": false,
+                "placeholder_true": "true",
+                "placeholder_false": "false"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

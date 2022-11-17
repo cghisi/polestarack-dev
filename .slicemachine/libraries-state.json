@@ -671,6 +671,11 @@
             "path": "/Users/christophe/Documents/dev/polestarack/.slicemachine/assets/slices/Grid/gridHeroImage/preview.png",
             "width": 1280,
             "height": 800
+          },
+          "gridWithVideo": {
+            "path": "/Users/christophe/Documents/dev/polestarack/.slicemachine/assets/slices/Grid/gridWithVideo/preview.png",
+            "width": 1280,
+            "height": 800
           }
         }
       },
@@ -959,6 +964,115 @@
           "extension": "js"
         },
         "screenshotPaths": {}
+      },
+      "navigation": {
+        "library": "slices",
+        "id": "navigation",
+        "name": "Navigation",
+        "description": "Navigation",
+        "model": {
+          "id": "navigation",
+          "type": "SharedSlice",
+          "name": "Navigation",
+          "description": "Navigation",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Navigation",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              },
+              "items": {
+                "link_label": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Link Label",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "link_url": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Link URL",
+                    "placeholder": "",
+                    "allowTargetBlank": false,
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "link_label": [
+                  {
+                    "type": "paragraph",
+                    "text": "Id ex cillum proident ut fugiat aliqua consectetur ullamco in esse cupidatat ut laboris ad sit. Quis amet ea elit ex do.",
+                    "spans": []
+                  }
+                ],
+                "link_url": {
+                  "link_type": "Web",
+                  "url": "http://google.com"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Figure",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Magna do aliquip dolore est aute ad qui fugiat Lorem. Ex non duis exercitation occaecat ea reprehenderit magna laborum velit cillum quis ullamco ex sint. Ipsum dolore eiusmod excepteur excepteur adipisicing id sit ullamco pariatur dolor non mollit duis irure.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "navigation"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/christophe/Documents/dev/polestarack/.slicemachine/assets/slices/Navigation/default/preview.png",
+            "width": 1280,
+            "height": 800
+          }
+        }
       }
     }
   }

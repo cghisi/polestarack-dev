@@ -4,12 +4,14 @@ import CanvasSlider from './CanvasSlider';
 import Grid from './Grid';
 import HeroBanner from './HeroBanner';
 import ImageSlider from './ImageSlider';
+import Navigation from './Navigation';
 
 export {
 	CanvasSlider,
 	Grid,
 	HeroBanner,
 	ImageSlider,
+	Navigation,
 };
 
 export const components = {
@@ -17,4 +19,5 @@ export const components = {
 	grid_component: Grid,
 	hero_banner: HeroBanner,
 	image_slider: ImageSlider,
+	navigation: Navigation,
 };

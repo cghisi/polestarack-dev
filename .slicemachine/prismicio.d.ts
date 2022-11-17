@@ -6,6 +6,35 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for footer documents */
+interface FooterDocumentData {
+    /**
+     * Slice Zone field in *footer*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<FooterDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *footer → Slice Zone*
+ *
+ */
+type FooterDocumentDataSlicesSlice = NavigationSlice;
+/**
+ * footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<FooterDocumentData>, "footer", Lang>;
 /** Content for homepage documents */
 interface HomepageDocumentData {
     /**
@@ -114,7 +143,160 @@ type PageDocumentDataSlicesSlice = HeroBannerSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<PageDocumentData>, "page", Lang>;
-export type AllDocumentTypes = HomepageDocument | NavigationDocument | PageDocument;
+/** Content for settings documents */
+interface SettingsDocumentData {
+    /**
+     * Newsletter Title field in *settings*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.newsletter_title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    newsletter_title: prismicT.RichTextField;
+    /**
+     * Newsletter Description field in *settings*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.newsletter_description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    newsletter_description: prismicT.RichTextField;
+    /**
+     * Newsletter Link Label field in *settings*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.newsletter_link_label
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    newsletter_link_label: prismicT.RichTextField;
+    /**
+     * Newsletter Link field in *settings*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.newsletter_link
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    newsletter_link: prismicT.LinkField;
+    /**
+     * Column 1 field in *settings*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.column_1[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    column_1: prismicT.GroupField<Simplify<SettingsDocumentDataColumn1Item>>;
+    /**
+     * Column 2 field in *settings*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.column_2[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    column_2: prismicT.GroupField<Simplify<SettingsDocumentDataColumn2Item>>;
+}
+/**
+ * Item in settings → Column 1
+ *
+ */
+export interface SettingsDocumentDataColumn1Item {
+    /**
+     * Link Label field in *settings → Column 1*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.column_1[].link_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    link_label: prismicT.RichTextField;
+    /**
+     * Link URL field in *settings → Column 1*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.column_1[].link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+    /**
+     * Header field in *settings → Column 1*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: settings.column_1[].header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    header: prismicT.BooleanField;
+}
+/**
+ * Item in settings → Column 2
+ *
+ */
+export interface SettingsDocumentDataColumn2Item {
+    /**
+     * Link Label field in *settings → Column 2*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.column_2[].link_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    link_label: prismicT.RichTextField;
+    /**
+     * Link URL field in *settings → Column 2*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.column_2[].link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+    /**
+     * Header field in *settings → Column 2*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: settings.column_2[].header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    header: prismicT.BooleanField;
+}
+/**
+ * settings document from Prismic
+ *
+ * - **API ID**: `settings`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type SettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<SettingsDocumentData>, "settings", Lang>;
+export type AllDocumentTypes = FooterDocument | HomepageDocument | NavigationDocument | PageDocument | SettingsDocument;
 /**
  * Primary content in CanvasSlider → Primary
  *
@@ -780,11 +962,86 @@ type ImageSliderSliceVariation = ImageSliderSliceDefault;
  *
  */
 export type ImageSliderSlice = prismicT.SharedSlice<"image_slider", ImageSliderSliceVariation>;
+/**
+ * Primary content in Navigation → Primary
+ *
+ */
+interface NavigationSliceDefaultPrimary {
+    /**
+     * Title field in *Navigation → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: navigation.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *Navigation → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your feature
+     * - **API ID Path**: navigation.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Item in Navigation → Items
+ *
+ */
+export interface NavigationSliceDefaultItem {
+    /**
+     * Link Label field in *Navigation → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.items[].link_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    link_label: prismicT.RichTextField;
+    /**
+     * Link URL field in *Navigation → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.items[].link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+}
+/**
+ * Default variation for Navigation Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Navigation`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<NavigationSliceDefaultPrimary>, Simplify<NavigationSliceDefaultItem>>;
+/**
+ * Slice variation for *Navigation*
+ *
+ */
+type NavigationSliceVariation = NavigationSliceDefault;
+/**
+ * Navigation Shared Slice
+ *
+ * - **API ID**: `navigation`
+ * - **Description**: `Navigation`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type NavigationSlice = prismicT.SharedSlice<"navigation", NavigationSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataItemsItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, AllDocumentTypes, CanvasSliderSliceDefaultPrimary, CanvasSliderSliceDefaultItem, CanvasSliderSliceDefault, CanvasSliderSliceVariation, CanvasSliderSlice, GridComponentSliceDefaultPrimary, GridComponentSliceDefaultItem, GridComponentSliceDefault, GridComponentSliceGridHeroImagePrimary, GridComponentSliceGridHeroImageItem, GridComponentSliceGridHeroImage, GridComponentSliceGridWithVideoPrimary, GridComponentSliceGridWithVideoItem, GridComponentSliceGridWithVideo, GridComponentSliceVariation, GridComponentSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageSliderSliceDefaultPrimary, ImageSliderSliceDefaultItem, ImageSliderSliceDefault, ImageSliderSliceVariation, ImageSliderSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataItemsItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocumentDataColumn1Item, SettingsDocumentDataColumn2Item, SettingsDocument, AllDocumentTypes, CanvasSliderSliceDefaultPrimary, CanvasSliderSliceDefaultItem, CanvasSliderSliceDefault, CanvasSliderSliceVariation, CanvasSliderSlice, GridComponentSliceDefaultPrimary, GridComponentSliceDefaultItem, GridComponentSliceDefault, GridComponentSliceGridHeroImagePrimary, GridComponentSliceGridHeroImageItem, GridComponentSliceGridHeroImage, GridComponentSliceGridWithVideoPrimary, GridComponentSliceGridWithVideoItem, GridComponentSliceGridWithVideo, GridComponentSliceVariation, GridComponentSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageSliderSliceDefaultPrimary, ImageSliderSliceDefaultItem, ImageSliderSliceDefault, ImageSliderSliceVariation, ImageSliderSlice, NavigationSliceDefaultPrimary, NavigationSliceDefaultItem, NavigationSliceDefault, NavigationSliceVariation, NavigationSlice };
     }
 }

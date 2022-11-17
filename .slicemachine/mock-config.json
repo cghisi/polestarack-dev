@@ -2,7 +2,9 @@
   "_cts": {
     "page": {},
     "homepage": {},
-    "navigation": {}
+    "navigation": {},
+    "footer": {},
+    "settings": {}
   },
   "slices": {
     "HeroBanner": {
@@ -48,6 +50,11 @@
         "items": {}
       },
       "gridWithVideo": {
+        "items": {}
+      }
+    },
+    "Navigation": {
+      "default": {
         "items": {}
       }
     }

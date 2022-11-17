@@ -7,7 +7,7 @@ import Layout from "../components/Layout";
 
 const Page = ({ page, navigation, settings }) => {
   return (
-    <Layout navigation={navigation}>
+    <Layout navigation={navigation} settings={settings.data}>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   )
@@ -21,12 +21,14 @@ export async function getStaticProps({ previewData }) {
   const client = createClient({ previewData });
 
   const page = await client.getSingle("homepage");
-  const navigation = await client.getByUID('navigation','main_navigation')
+  const navigation = await client.getByUID('navigation','main_navigation');
+  const settings = await client.getSingle("settings");
 
   return {
     props: {
       page,
       navigation,
+      settings,
     },
   };
 }

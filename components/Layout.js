@@ -4,7 +4,7 @@ import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Layout = ({ children, navigation }) => (
+const Layout = ({ children, navigation, settings }) => (
   <>
     <Head>
       <meta charSet="utf-8" />
@@ -19,7 +19,7 @@ const Layout = ({ children, navigation }) => (
     </Head>
     <Header navigation={navigation}></Header>
     <main>{children}</main>
-    <Footer></Footer>
+    <Footer settings={settings}></Footer>
   </>
 );
 
