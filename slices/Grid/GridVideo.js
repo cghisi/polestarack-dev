@@ -23,18 +23,18 @@ const GridVideo = ({ slice }) => {
       ) : (
         <p>start by editing this slice from inside Slice Machine!</p>
       )}
-      <div className="flex flex-col md:flex-row  gap-5">
+      <div className="flex flex-col lg:flex-row gap-5">
         {slice.items.map((item, i) => {
           let gridValue = "";
           switch (item.size) {
             case "1/3":
-              gridValue = "md:w-1/3";
+              gridValue = "lg:w-1/3";
               break;
             case "2/3":
-              gridValue = "md:w-2/3";
+              gridValue = "lg:w-2/3";
               break;
-            default:
-              gridValue = "md:w-1/2";
+          default:
+              gridValue = "lg:w-1/2";
           }
 
           return (
