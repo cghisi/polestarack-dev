@@ -24,18 +24,18 @@ const GridDefault = ({ slice }) => {
       ) : (
         <p>start by editing this slice from inside Slice Machine!</p>
       )}
-      <div className="flex flex-col md:flex-row gap-x-5 pt-2">
+      <div className="flex flex-col lg:flex-row gap-x-5 pt-2">
         {slice.items.map((item, i) => {
           let gridValue = "";
           switch (item.size) {
             case "1/3":
-              gridValue = "md:w-1/3 md:mb-5";
+              gridValue = "lg:w-1/3 md:mb-5";
               break;
             case "2/3":
-              gridValue = "md:w-2/3 md:mb-5";
+              gridValue = "lg:w-2/3 md:mb-5";
               break;
             default:
-              gridValue = "md:w-1/2 md:mb-5";
+              gridValue = "lg:w-1/2 md:mb-5";
           }
 
           return (
