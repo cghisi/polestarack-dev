@@ -45,7 +45,7 @@ const GridHero = ({ slice }) => {
               className={
                 item.image.url !== undefined
                   ? "relative " + gridValue
-                  : "md:relative h-64 md:h-auto " + gridValue
+                  : "relative h-64 md:h-auto " + gridValue
               }
               style={{ backgroundColor: item.background_color }}
             >
@@ -64,7 +64,7 @@ const GridHero = ({ slice }) => {
                 className={
                   item.image.url !== undefined
                     ? "absolute top-0 left-0 mt-2 px-5 "
-                    : "md:absolute top-0 left-0 mt-2 px-5 h-64 md:h-auto"
+                    : "absolute top-0 left-0 mt-2 px-5 h-64 md:h-auto"
                 }
               >
                 <PrismicRichText field={item.subtitle} />
@@ -78,13 +78,7 @@ const GridHero = ({ slice }) => {
                 />
                 <PrismicRichText field={item.description} />
               </div>
-              <div
-                className={
-                  item.image.url !== undefined
-                    ? "absolute bottom-5 left-5 "
-                    : "md:absolute md:bottom-5 md:left-5 p-5 md:p-0"
-                }
-              >
+              <div className="absolute bottom-5 left-5">
                 <Button
                   primary
                   label={item.cta_label}
