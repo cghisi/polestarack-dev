@@ -2,13 +2,15 @@ import React from "react";
 import Head from "next/head";
 
 import Header from "./Header";
+import Footer from "./Footer";
 
-const Layout = ({children, navigation }) => (
+const Layout = ({ children, navigation }) => (
   <>
     <Head>
       <meta charSet="utf-8" />
       <title>
-        Polestar Hack - Recreate the Polestar car website experience using NextJS and Prismic
+        Polestar Hack - Recreate the Polestar car website experience using
+        NextJS and Prismic
       </title>
       <meta
         name="description"
@@ -16,7 +18,8 @@ const Layout = ({children, navigation }) => (
       />
     </Head>
     <Header navigation={navigation}></Header>
-    <main>{ children }</main>
+    <main>{children}</main>
+    <Footer></Footer>
   </>
 );
 
