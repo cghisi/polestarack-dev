@@ -3,7 +3,7 @@ import { Button } from "./Button";
 
 const Footer = ({ settings }) => {
   return (
-    <div className="bg-gray-200 p-10">
+    <div className="bg-gray-200 px-5 py-10">
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row gap-x-8">
           <div className="lg:w-1/3 mb-10">
@@ -32,7 +32,39 @@ const Footer = ({ settings }) => {
               width="20px"
             />
           </div>
-          <div className="flex flex-col lg:flex-row gap-x-8">
+          <div className="grow lg:grid grid-cols-4 gap-4">
+            <div>
+              {settings.column_1.map((item, index) => (
+                <span
+                  className={
+                    item.header
+                      ? "flex items-center font-medium py-4"
+                      : "flex items-center py-2"
+                  }
+                  key={index}
+                >
+                  <PrismicLink field={item.link_url}>
+                    <PrismicText field={item.link_label} />
+                  </PrismicLink>
+                </span>
+              ))}
+            </div>
+            <div>
+              {settings.column_2.map((item, index) => (
+                <span
+                  className={
+                    item.header
+                      ? "flex items-center font-medium py-4"
+                      : "flex items-center py-2"
+                  }
+                  key={index}
+                >
+                  <PrismicLink field={item.link_url}>
+                    <PrismicText field={item.link_label} />
+                  </PrismicLink>
+                </span>
+              ))}
+            </div>
             <div>
               {settings.column_1.map((item, index) => (
                 <span
