@@ -2,32 +2,45 @@ import { PrismicLink, PrismicRichText, PrismicText } from "@prismicio/react";
 import { Button } from "./Button";
 
 const Footer = ({ settings }) => {
-  console.log(settings)
   return (
     <div className="bg-gray-200 p-10">
       <div className="container mx-auto">
-        <div className="flex flex-row gap-x-8">
-          <div className="md:w-1/4">
-              <PrismicRichText field={settings.newsletter_title} components={{
-                    heading2: ({ children }) => <h2 className="text-3xl py-5">{children}</h2>,
-                    paragraph: ({ children }) => <span>{children}</span>,
-                }} />
-              <PrismicRichText field={settings.newsletter_description} components={{
-                    heading2: ({ children }) => <h2 className="text-3xl">{children}</h2>,
-                    paragraph: ({ children }) => <p className="py-5">{children}</p>,
-                }} />
-                <Button
-                  label={settings.newsletter_link_label}
-                  url={settings.newsletter_link}
-                  height="20px"
-                  width="20px"
-                />
+        <div className="flex flex-col lg:flex-row gap-x-8">
+          <div className="lg:w-1/3 mb-10">
+            <PrismicRichText
+              field={settings.newsletter_title}
+              components={{
+                heading2: ({ children }) => (
+                  <h2 className="text-3xl py-5">{children}</h2>
+                ),
+                paragraph: ({ children }) => <span>{children}</span>,
+              }}
+            />
+            <PrismicRichText
+              field={settings.newsletter_description}
+              components={{
+                heading2: ({ children }) => (
+                  <h2 className="text-3xl">{children}</h2>
+                ),
+                paragraph: ({ children }) => <p className="py-5">{children}</p>,
+              }}
+            />
+            <Button
+              label={settings.newsletter_link_label}
+              url={settings.newsletter_link}
+              height="20px"
+              width="20px"
+            />
           </div>
-          <div className="flex flex-row gap-x-8">
+          <div className="flex flex-col lg:flex-row gap-x-8">
             <div>
               {settings.column_1.map((item, index) => (
                 <span
-                  className={item.header ? "flex items-center font-medium py-4" : "flex items-center py-2"}
+                  className={
+                    item.header
+                      ? "flex items-center font-medium py-4"
+                      : "flex items-center py-2"
+                  }
                   key={index}
                 >
                   <PrismicLink field={item.link_url}>
@@ -39,7 +52,11 @@ const Footer = ({ settings }) => {
             <div>
               {settings.column_2.map((item, index) => (
                 <span
-                  className="flex items-center pl-20 py-4"
+                  className={
+                    item.header
+                      ? "flex items-center font-medium py-4"
+                      : "flex items-center py-2"
+                  }
                   key={index}
                 >
                   <PrismicLink field={item.link_url}>
