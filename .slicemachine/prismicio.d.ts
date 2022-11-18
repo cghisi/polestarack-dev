@@ -211,6 +211,28 @@ interface SettingsDocumentData {
      *
      */
     column_2: prismicT.GroupField<Simplify<SettingsDocumentDataColumn2Item>>;
+    /**
+     * Column 3 field in *settings*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.column_3[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    column_3: prismicT.GroupField<Simplify<SettingsDocumentDataColumn3Item>>;
+    /**
+     * Column 4 field in *settings*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.column_4[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    column_4: prismicT.GroupField<Simplify<SettingsDocumentDataColumn4Item>>;
 }
 /**
  * Item in settings → Column 1
@@ -281,6 +303,80 @@ export interface SettingsDocumentDataColumn2Item {
      * - **Placeholder**: *None*
      * - **Default Value**: false
      * - **API ID Path**: settings.column_2[].header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    header: prismicT.BooleanField;
+}
+/**
+ * Item in settings → Column 3
+ *
+ */
+export interface SettingsDocumentDataColumn3Item {
+    /**
+     * Link Label field in *settings → Column 3*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.column_3[].link_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    link_label: prismicT.RichTextField;
+    /**
+     * Link URL field in *settings → Column 3*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.column_3[].link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+    /**
+     * Header field in *settings → Column 3*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: settings.column_3[].header
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    header: prismicT.BooleanField;
+}
+/**
+ * Item in settings → Column 4
+ *
+ */
+export interface SettingsDocumentDataColumn4Item {
+    /**
+     * Link Label field in *settings → Column 4*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.column_4[].link_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    link_label: prismicT.RichTextField;
+    /**
+     * Link URL field in *settings → Column 4*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: settings.column_4[].link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link_url: prismicT.LinkField;
+    /**
+     * Header field in *settings → Column 4*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: settings.column_4[].header
      * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
      *
      */
@@ -596,6 +692,17 @@ export interface GridComponentSliceGridHeroImageItem {
      */
     cta_link: prismicT.LinkField;
     /**
+     * Button Style field in *Grid → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **Default Value**: Primary
+     * - **API ID Path**: grid_component.items[].cta_style
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    cta_style: prismicT.SelectField<"Primary" | "Secondary", "filled">;
+    /**
      * Background Color field in *Grid → Items*
      *
      * - **Field Type**: Color
@@ -605,6 +712,16 @@ export interface GridComponentSliceGridHeroImageItem {
      *
      */
     background_color: prismicT.ColorField;
+    /**
+     * Text Color field in *Grid → Items*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    text_color: prismicT.ColorField;
     /**
      * Size field in *Grid → Items*
      *
@@ -1042,6 +1159,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataItemsItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocumentDataColumn1Item, SettingsDocumentDataColumn2Item, SettingsDocument, AllDocumentTypes, CanvasSliderSliceDefaultPrimary, CanvasSliderSliceDefaultItem, CanvasSliderSliceDefault, CanvasSliderSliceVariation, CanvasSliderSlice, GridComponentSliceDefaultPrimary, GridComponentSliceDefaultItem, GridComponentSliceDefault, GridComponentSliceGridHeroImagePrimary, GridComponentSliceGridHeroImageItem, GridComponentSliceGridHeroImage, GridComponentSliceGridWithVideoPrimary, GridComponentSliceGridWithVideoItem, GridComponentSliceGridWithVideo, GridComponentSliceVariation, GridComponentSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageSliderSliceDefaultPrimary, ImageSliderSliceDefaultItem, ImageSliderSliceDefault, ImageSliderSliceVariation, ImageSliderSlice, NavigationSliceDefaultPrimary, NavigationSliceDefaultItem, NavigationSliceDefault, NavigationSliceVariation, NavigationSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HomepageDocumentData, HomepageDocumentDataSlicesSlice, HomepageDocument, NavigationDocumentData, NavigationDocumentDataItemsItem, NavigationDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, SettingsDocumentData, SettingsDocumentDataColumn1Item, SettingsDocumentDataColumn2Item, SettingsDocumentDataColumn3Item, SettingsDocumentDataColumn4Item, SettingsDocument, AllDocumentTypes, CanvasSliderSliceDefaultPrimary, CanvasSliderSliceDefaultItem, CanvasSliderSliceDefault, CanvasSliderSliceVariation, CanvasSliderSlice, GridComponentSliceDefaultPrimary, GridComponentSliceDefaultItem, GridComponentSliceDefault, GridComponentSliceGridHeroImagePrimary, GridComponentSliceGridHeroImageItem, GridComponentSliceGridHeroImage, GridComponentSliceGridWithVideoPrimary, GridComponentSliceGridWithVideoItem, GridComponentSliceGridWithVideo, GridComponentSliceVariation, GridComponentSlice, HeroBannerSliceDefaultPrimary, HeroBannerSliceDefaultItem, HeroBannerSliceDefault, HeroBannerSliceVariation, HeroBannerSlice, ImageSliderSliceDefaultPrimary, ImageSliderSliceDefaultItem, ImageSliderSliceDefault, ImageSliderSliceVariation, ImageSliderSlice, NavigationSliceDefaultPrimary, NavigationSliceDefaultItem, NavigationSliceDefault, NavigationSliceVariation, NavigationSlice };
     }
 }

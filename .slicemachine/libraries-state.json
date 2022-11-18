@@ -119,9 +119,9 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/christophe/Documents/dev/polestarack/.slicemachine/assets/slices/CanvasSlider/default/preview.png",
-            "width": 800,
-            "height": 481
+            "path": "/Users/christophe/Documents/dev/polestarack/slices/CanvasSlider/default/preview.png",
+            "width": 1408,
+            "height": 658
           }
         }
       },
@@ -318,10 +318,29 @@
                     "select": null
                   }
                 },
+                "cta_style": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Button Style",
+                    "placeholder": "",
+                    "options": [
+                      "Primary",
+                      "Secondary"
+                    ],
+                    "default_value": "Primary"
+                  }
+                },
                 "background_color": {
                   "type": "Color",
                   "config": {
                     "label": "Background Color",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Text Color",
                     "placeholder": ""
                   }
                 },
@@ -455,7 +474,7 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+                  "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
                   "mobile": {
                     "dimensions": {
                       "width": 400,
@@ -463,35 +482,35 @@
                     },
                     "alt": null,
                     "copyright": null,
-                    "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+                    "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a"
                   }
                 },
                 "title": [
                   {
                     "type": "paragraph",
-                    "text": "Incididunt esse elit officia. Laboris aute officia quis eiusmod est voluptate ullamco eu amet irure ut id elit. Ipsum in non ipsum sunt non ad irure magna qui.",
+                    "text": "Magna fugiat culpa sint deserunt Lorem eiusmod officia ex duis qui nulla culpa laborum aliquip. Officia dolore ut labore aute.",
                     "spans": []
                   }
                 ],
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Elit Lorem excepteur excepteur elit culpa non deserunt est do. Ad pariatur voluptate elit. Laborum incididunt ad occaecat cillum officia nisi.",
+                    "text": "Ut enim commodo esse dolore cupidatat laborum esse reprehenderit minim officia occaecat ad enim. Id cupidatat ad et aute minim officia.",
                     "spans": []
                   }
                 ],
                 "cta_label": [
                   {
                     "type": "paragraph",
-                    "text": "Esse adipisicing ut dolore est laborum voluptate do proident consequat magna cillum elit cupidatat laborum et.",
+                    "text": "Amet aute ex sit eiusmod non. Laborum commodo duis minim ipsum labore. Tempor do culpa dolor incididunt fugiat labore elit tempor irure.",
                     "spans": []
                   }
                 ],
                 "cta_link": {
                   "link_type": "Web",
-                  "url": "http://google.com"
+                  "url": "https://prismic.io"
                 },
-                "background_color": "#21f81f",
+                "background_color": "#06c419",
                 "size": "1/3"
               }
             ],
@@ -499,14 +518,14 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Giant",
+                  "text": "Flight",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Esse aute dolore laboris adipisicing exercitation excepteur pariatur Lorem sit nostrud. Nostrud ea esse eu ullamco pariatur adipisicing commodo cillum labore consectetur nisi mollit culpa ea.",
+                  "text": "Officia anim cupidatat amet do consequat non nisi.",
                   "spans": []
                 }
               ]
@@ -525,7 +544,7 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
                   "mobile": {
                     "dimensions": {
                       "width": 450,
@@ -533,42 +552,44 @@
                     },
                     "alt": null,
                     "copyright": null,
-                    "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
+                    "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef"
                   }
                 },
                 "title": [
                   {
                     "type": "paragraph",
-                    "text": "Lorem reprehenderit aliquip esse incididunt veniam voluptate id in et cupidatat consequat nisi in.",
+                    "text": "Voluptate aliquip mollit duis cupidatat sunt ad ipsum labore anim esse ipsum pariatur.",
                     "spans": []
                   }
                 ],
                 "subtitle": [
                   {
                     "type": "paragraph",
-                    "text": "Lorem aliqua ullamco nostrud culpa sunt sint nisi sunt occaecat velit occaecat eiusmod. Eu tempor reprehenderit quis culpa excepteur consequat laborum laborum excepteur exercitation voluptate aliquip. Duis aliqua est cupidatat culpa duis pariatur ad aliquip.",
+                    "text": "Aliquip et reprehenderit sunt anim do incididunt. Qui magna deserunt id id ut nisi Lorem aliqua id est et dolore non.",
                     "spans": []
                   }
                 ],
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Aliqua labore excepteur mollit irure nostrud tempor dolore dolor ut laborum duis. Voluptate irure aliqua eu do eu eiusmod voluptate eiusmod quis exercitation est cillum eu.",
+                    "text": "Ullamco sunt sint culpa consequat nostrud id in occaecat elit amet. Adipisicing irure magna incididunt magna Lorem commodo cupidatat ea consequat minim nisi occaecat excepteur cupidatat.",
                     "spans": []
                   }
                 ],
                 "cta_label": [
                   {
                     "type": "paragraph",
-                    "text": "Proident labore enim laborum quis nisi.",
+                    "text": "Ullamco cupidatat id fugiat velit Lorem.",
                     "spans": []
                   }
                 ],
                 "cta_link": {
                   "link_type": "Web",
-                  "url": "https://slicemachine.dev"
+                  "url": "http://google.com"
                 },
-                "background_color": "#af1f66",
+                "cta_style": "Secondary",
+                "background_color": "#960478",
+                "text_color": "#e50ecb",
                 "size": "1/3"
               }
             ],
@@ -576,14 +597,14 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Himself",
+                  "text": "Coffee",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Ullamco reprehenderit ullamco cupidatat excepteur dolore ad labore velit excepteur. Excepteur incididunt sint pariatur amet occaecat aute tempor irure voluptate.",
+                  "text": "Culpa labore non exercitation est do nostrud aliquip. Sit sit irure enim pariatur laboris esse Lorem culpa elit adipisicing reprehenderit enim anim velit. Non quis officia aliquip.",
                   "spans": []
                 }
               ]
@@ -605,36 +626,36 @@
                 "title": [
                   {
                     "type": "paragraph",
-                    "text": "Anim ullamco in officia.",
+                    "text": "Sint sunt anim sunt excepteur aliqua proident anim nulla enim reprehenderit. Adipisicing cupidatat nisi anim exercitation laboris aute reprehenderit pariatur cillum aliqua sunt irure.",
                     "spans": []
                   }
                 ],
                 "subtitle": [
                   {
                     "type": "paragraph",
-                    "text": "Laboris sint sit in magna eiusmod commodo irure deserunt anim cupidatat proident cillum nisi minim veniam. Consectetur duis occaecat excepteur do do qui minim consequat consequat aliquip in tempor. Ullamco tempor ullamco magna labore cupidatat.",
+                    "text": "Voluptate eiusmod velit mollit magna enim aliqua velit. Pariatur est voluptate nostrud id velit mollit cillum sint veniam sint velit. Minim cupidatat nulla irure eu ullamco aute culpa incididunt do laboris in sint voluptate.",
                     "spans": []
                   }
                 ],
                 "description": [
                   {
                     "type": "paragraph",
-                    "text": "Sint minim amet voluptate pariatur quis Lorem cillum voluptate. Aliqua esse nostrud exercitation aliqua aliqua culpa excepteur Lorem ipsum non adipisicing ullamco.",
+                    "text": "Commodo labore eu cupidatat aute minim dolore labore fugiat.",
                     "spans": []
                   }
                 ],
                 "cta_label": [
                   {
                     "type": "paragraph",
-                    "text": "Ea quis irure nisi consequat officia cillum nostrud ad. Laboris voluptate laboris et officia esse ullamco nulla laborum nulla dolor occaecat mollit dolor. Velit culpa Lorem officia minim qui officia aliqua quis deserunt cillum excepteur ullamco sunt sint.",
+                    "text": "Minim occaecat ullamco officia.",
                     "spans": []
                   }
                 ],
                 "cta_link": {
                   "link_type": "Web",
-                  "url": "https://slicemachine.dev"
+                  "url": "http://google.com"
                 },
-                "background_color": "#c5506a",
+                "background_color": "#ea7948",
                 "size": "2/3"
               }
             ],
@@ -642,14 +663,14 @@
               "title": [
                 {
                   "type": "heading1",
-                  "text": "Lungs",
+                  "text": "Future",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Tempor deserunt commodo irure aute.",
+                  "text": "Eu pariatur officia nulla dolore ad irure dolore qui fugiat reprehenderit qui commodo. Mollit ut consectetur reprehenderit exercitation excepteur elit laborum dolor eu velit cillum enim eu.",
                   "spans": []
                 }
               ]
@@ -663,19 +684,19 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/christophe/Documents/dev/polestarack/.slicemachine/assets/slices/Grid/default/preview.png",
-            "width": 800,
-            "height": 836
+            "path": "/Users/christophe/Documents/dev/polestarack/slices/Grid/default/preview.png",
+            "width": 1339,
+            "height": 512
           },
           "gridHeroImage": {
-            "path": "/Users/christophe/Documents/dev/polestarack/.slicemachine/assets/slices/Grid/gridHeroImage/preview.png",
-            "width": 1280,
-            "height": 800
+            "path": "/Users/christophe/Documents/dev/polestarack/slices/Grid/gridHeroImage/preview.png",
+            "width": 1316,
+            "height": 604
           },
           "gridWithVideo": {
-            "path": "/Users/christophe/Documents/dev/polestarack/.slicemachine/assets/slices/Grid/gridWithVideo/preview.png",
-            "width": 1280,
-            "height": 800
+            "path": "/Users/christophe/Documents/dev/polestarack/slices/Grid/gridWithVideo/preview.png",
+            "width": 1279,
+            "height": 528
           }
         }
       },
@@ -825,9 +846,9 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/christophe/Documents/dev/polestarack/.slicemachine/assets/slices/HeroBanner/default/preview.png",
-            "width": 800,
-            "height": 600
+            "path": "/Users/christophe/Documents/dev/polestarack/slices/HeroBanner/default/preview.png",
+            "width": 1411,
+            "height": 734
           }
         }
       },
@@ -1068,9 +1089,9 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/christophe/Documents/dev/polestarack/.slicemachine/assets/slices/Navigation/default/preview.png",
-            "width": 1280,
-            "height": 800
+            "path": "/Users/christophe/Documents/dev/polestarack/slices/Navigation/default/preview.png",
+            "width": 462,
+            "height": 511
           }
         }
       }
