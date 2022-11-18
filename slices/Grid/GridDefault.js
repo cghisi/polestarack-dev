@@ -20,7 +20,15 @@ const GridDefault = ({ slice }) => {
       )}
 
       {slice.primary.description ? (
-        <PrismicRichText field={slice.primary.description} />
+        <PrismicRichText
+          field={slice.primary.description}
+          components={{
+            paragraph: ({ children }) => <p>{children}</p>,
+            heading1: ({ children }) => (
+              <h1 className="px-5 text-3xl mb-5">{children}</h1>
+            ),
+          }}
+        />
       ) : (
         <p>start by editing this slice from inside Slice Machine!</p>
       )}
@@ -59,15 +67,23 @@ const GridDefault = ({ slice }) => {
                   field={item.title}
                   components={{
                     heading2: ({ children }) => (
-                      <h2 className="text-2xl mb-5 font-medium">{children}</h2>
+                      <h2 className="text-2xl font-medium">{children}</h2>
                     ),
                   }}
                 />
-                <PrismicRichText field={item.description} />
+                <PrismicRichText
+                  field={item.description}
+                  components={{
+                    paragraph: ({ children }) => <p>{children}</p>,
+                    heading2: ({ children }) => (
+                      <h1 className="text-2xl font-medium">{children}</h1>
+                    ),
+                  }}
+                />
               </div>
               <div className="px-5">
                 <Button
-                  primary
+                  style="Primary"
                   label={item.cta_label}
                   url={item.cta_link}
                   height="20px"

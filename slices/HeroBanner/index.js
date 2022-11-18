@@ -31,7 +31,7 @@ const HeroBanner = ({ slice }) => (
       )}
       {slice.primary.cta_link ? (
         <Button
-          primary
+          style="Primary"
           label={slice.primary.cta_label}
           url={slice.primary.cta_link}
           height="16px"
@@ -44,7 +44,7 @@ const HeroBanner = ({ slice }) => (
         {slice.items.map((item, i) => {
           return (
             <Button
-              primary
+              style="Primary"
               label={item.label}
               url={item.url}
               height="20px"
