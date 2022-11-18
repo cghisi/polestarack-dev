@@ -2,23 +2,17 @@ import React from "react";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
 import Image from "next/image";
 
-export const Button = ({
-  primary,
-  color,
-  size,
-  label,
-  url,
-  width,
-  height,
-  ...props
-}) => {
-  const mode = primary
-    ? ""
-    : "flex gap-2 border-2 border-black bg-black text-white py-4 px-5 hover:bg-gray font-medium w-1/2";
-
+export const Button = ({ style, label, url, width, height }) => {
   if (url) {
     return (
-      <PrismicLink field={url} className={mode}>
+      <PrismicLink
+        field={url}
+        className={
+          style == "Secondary"
+            ? "flex gap-2 border-2 border-black bg-black text-white py-4 px-5 hover:bg-gray font-medium w-full"
+            : ""
+        }
+      >
         <span className="flex gap-2">
           <PrismicRichText
             field={label}

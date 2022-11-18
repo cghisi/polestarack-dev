@@ -83,7 +83,7 @@ const GridDefault = ({ slice }) => {
               </div>
               <div className="px-5">
                 <Button
-                  primary
+                  style="Primary"
                   label={item.cta_label}
                   url={item.cta_link}
                   height="20px"

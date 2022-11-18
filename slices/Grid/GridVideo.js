@@ -33,7 +33,7 @@ const GridVideo = ({ slice }) => {
             case "2/3":
               gridValue = "lg:w-2/3";
               break;
-          default:
+            default:
               gridValue = "lg:w-1/2";
           }
 
@@ -67,7 +67,7 @@ const GridVideo = ({ slice }) => {
               </div>
               <div className="px-5">
                 <Button
-                  primary
+                  style="Primary"
                   label={item.cta_label}
                   url={item.cta_link}
                   height="20px"

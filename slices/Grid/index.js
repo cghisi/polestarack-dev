@@ -1,7 +1,4 @@
 import React from "react";
-import { PrismicRichText } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/next";
-import { Button } from "../../components/Button";
 
 import GridHero from "./GridHero";
 import GridVideo from "./GridVideo";

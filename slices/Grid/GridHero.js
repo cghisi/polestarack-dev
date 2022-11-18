@@ -47,7 +47,10 @@ const GridHero = ({ slice }) => {
                   ? "relative " + gridValue
                   : "relative h-64 md:h-auto " + gridValue
               }
-              style={{ backgroundColor: item.background_color }}
+              style={{
+                backgroundColor: item.background_color,
+                color: item.text_color,
+              }}
             >
               {item.image.url !== undefined ? (
                 <div>
@@ -76,11 +79,19 @@ const GridHero = ({ slice }) => {
                     ),
                   }}
                 />
-                <PrismicRichText field={item.description} />
+                <PrismicRichText
+                  field={item.description}
+                  components={{
+                    heading2: ({ children }) => (
+                      <h2 className="text-2xl mb-5 font-medium">{children}</h2>
+                    ),
+                    paragraph: ({ children }) => <p>{children}</p>,
+                  }}
+                />
               </div>
               <div className="absolute bottom-5 left-5">
                 <Button
-                  primary
+                  style={item.cta_style == "Primary" ? "Primary" : "Secondary"}
                   label={item.cta_label}
                   url={item.cta_link}
                   height="20px"

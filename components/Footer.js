@@ -25,14 +25,17 @@ const Footer = ({ settings }) => {
                 paragraph: ({ children }) => <p className="py-5">{children}</p>,
               }}
             />
-            <Button
-              label={settings.newsletter_link_label}
-              url={settings.newsletter_link}
-              height="20px"
-              width="20px"
-            />
+            <div className="absolute">
+              <Button
+                style="Secondary"
+                label={settings.newsletter_link_label}
+                url={settings.newsletter_link}
+                height="20px"
+                width="20px"
+              />
+            </div>
           </div>
-          <div className="grow lg:grid grid-cols-4 gap-4">
+          <div className="grow lg:grid grid-cols-4 gap-4 my-5 text-gray-500 lg:my-0">
             <div>
               {settings.column_1.map((item, index) => (
                 <span
@@ -54,7 +57,7 @@ const Footer = ({ settings }) => {
                 <span
                   className={
                     item.header
-                      ? "flex items-center font-medium py-4"
+                      ? "flex items-center font-medium text-gray-500 py-4"
                       : "flex items-center py-2"
                   }
                   key={index}
@@ -66,11 +69,11 @@ const Footer = ({ settings }) => {
               ))}
             </div>
             <div>
-              {settings.column_1.map((item, index) => (
+              {settings.column_3.map((item, index) => (
                 <span
                   className={
                     item.header
-                      ? "flex items-center font-medium py-4"
+                      ? "flex items-center font-medium text-gray-500 py-4"
                       : "flex items-center py-2"
                   }
                   key={index}
@@ -82,11 +85,11 @@ const Footer = ({ settings }) => {
               ))}
             </div>
             <div>
-              {settings.column_2.map((item, index) => (
+              {settings.column_4.map((item, index) => (
                 <span
                   className={
                     item.header
-                      ? "flex items-center font-medium py-4"
+                      ? "flex items-center font-medium text-gray-500 py-4"
                       : "flex items-center py-2"
                   }
                   key={index}
