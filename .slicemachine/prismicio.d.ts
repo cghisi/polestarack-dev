@@ -625,6 +625,16 @@ interface GridComponentSliceGridHeroImagePrimary {
      *
      */
     description: prismicT.RichTextField;
+    /**
+     * Background Color field in *Grid → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
 }
 /**
  * Item in Grid → Items
@@ -691,6 +701,16 @@ export interface GridComponentSliceGridHeroImageItem {
      *
      */
     cta_link: prismicT.LinkField;
+    /**
+     * Button Color field in *Grid → Items*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: grid_component.items[].cta_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    cta_color: prismicT.ColorField;
     /**
      * Button Style field in *Grid → Items*
      *

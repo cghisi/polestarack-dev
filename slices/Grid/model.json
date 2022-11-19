@@ -124,6 +124,13 @@
             "label": "Description",
             "placeholder": "A nice description of your feature"
           }
+        },
+        "background_color": {
+          "type": "Color",
+          "config": {
+            "label": "Background Color",
+            "placeholder": ""
+          }
         }
       },
       "items": {
@@ -184,6 +191,13 @@
             "placeholder": "",
             "allowTargetBlank": false,
             "select": null
+          }
+        },
+        "cta_color": {
+          "type": "Color",
+          "config": {
+            "label": "Button Color",
+            "placeholder": ""
           }
         },
         "cta_style": {

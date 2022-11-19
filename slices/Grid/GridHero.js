@@ -25,7 +25,7 @@ const GridHero = ({ slice }) => {
         <p>start by editing this slice from inside Slice Machine!</p>
       )}
 
-      <div className="flex flex-col md:flex-row gap-x-5">
+      <div className="flex flex-col md:flex-row gap-x-5" style={{backgroundColor: slice.primary.background_color}}>
         {slice.items.map((item, i) => {
           let gridValue = "";
           switch (item.size) {
@@ -70,7 +70,12 @@ const GridHero = ({ slice }) => {
                     : "absolute top-0 left-0 mt-2 px-5 h-64 md:h-auto"
                 }
               >
-                <PrismicRichText field={item.subtitle} />
+                <PrismicRichText field={item.subtitle} components={{
+                    heading2: ({ children }) => (
+                      <h2 className="text-2xl text-orange-400 my-5 font-medium">{children}</h2>
+                    ),
+                    paragraph: ({ children }) => <p>{children}</p>,
+                  }}/>
                 <PrismicRichText
                   field={item.title}
                   components={{
@@ -92,6 +97,7 @@ const GridHero = ({ slice }) => {
               <div className="absolute bottom-5 left-5">
                 <Button
                   style={item.cta_style == "Primary" ? "Primary" : "Secondary"}
+                  color={item.cta_color}
                   label={item.cta_label}
                   url={item.cta_link}
                   height="20px"

@@ -28,6 +28,7 @@ const Footer = ({ settings }) => {
             <div className="absolute">
               <Button
                 style="Secondary"
+                color="#000"
                 label={settings.newsletter_link_label}
                 url={settings.newsletter_link}
                 height="20px"
