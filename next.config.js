@@ -1,11 +1,7 @@
 const withOffline = require("next-offline");
 
 // your next.js configs
-const nextConfig = {};
-module.exports = withOffline(nextConfig);
-
-
-module.exports = {
+const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [
@@ -15,6 +11,5 @@ module.exports = {
       "images.unsplash.com",
     ],
   },
-  withOffline(nextConfig),
 };
-
+module.exports = withOffline(nextConfig);
