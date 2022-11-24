@@ -56,7 +56,7 @@ const GridDefault = ({ slice }) => {
                 <PrismicNextImage
                   field={item.image}
                   layout="responsive"
-                  alt={item.image.alt}
+                  alt=""
                 />
               ) : (
                 ""
