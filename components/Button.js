@@ -21,8 +21,6 @@ export const Button = ({ style, color, label, url, width, height }) => {
         : (linkStyle = "");
     }
 
-    console.log(linkStyle);
-
     return (
       <PrismicLink
         field={url}
