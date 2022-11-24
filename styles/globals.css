@@ -173,3 +173,13 @@ img{
 .custom-pointer-right:hover {
   cursor: url("/right-arrow.svg"), auto;
 }
+
+
+@media (max-width : 600px) {
+  .responsiveVideo {
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%,-50%);
+  }
+}
