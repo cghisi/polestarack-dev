@@ -62,6 +62,7 @@ const HeroBanner = ({ slice }) => (
         loop
         muted
         autoPlay
+        playsinline
         className="absolute z-10 w-auto min-w-full min-h-full max-w-none"
       >
         <source src={slice.primary.video.url} type="video/mp4" />
