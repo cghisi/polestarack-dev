@@ -67,9 +67,9 @@ export const AnimatedScroll = (image_url, width, height, props) => {
       return x;
     };
 
-    const frameIndex = 0;
-    const frameBase = 0;
-    const direction = "";
+    var frameIndex = 0;
+    var frameBase = 0;
+    var direction = "";
 
     window.addEventListener("click", (e) => {
       const position = getCursorPosition(canvas, e);

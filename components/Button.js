@@ -1,6 +1,6 @@
 import React from "react";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 export const Button = ({ style, color, label, url, width, height }) => {
   if (url) {
@@ -46,7 +46,7 @@ export const Button = ({ style, color, label, url, width, height }) => {
           />
           <Image
             src="/arrow.svg"
-            alt="Picture of the author"
+            alt="navigation arrow"
             width={width}
             height={height}
           />

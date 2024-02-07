@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { PrismicLink, PrismicText } from "@prismicio/react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 class Navigation extends Component {
   constructor(props) {

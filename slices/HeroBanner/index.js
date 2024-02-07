@@ -34,8 +34,8 @@ const HeroBanner = ({ slice }) => (
           style="Primary"
           label={slice.primary.cta_label}
           url={slice.primary.cta_link}
-          height="16px"
-          width="16px"
+          height="16"
+          width="16"
         />
       ) : (
         <a>Template slice, update me!</a>
@@ -47,8 +47,8 @@ const HeroBanner = ({ slice }) => (
               style="Primary"
               label={item.label}
               url={item.url}
-              height="20px"
-              width="20px"
+              height="20"
+              width="20"
               key={i}
             />
           );

@@ -86,8 +86,8 @@ const GridDefault = ({ slice }) => {
                   style="Primary"
                   label={item.cta_label}
                   url={item.cta_link}
-                  height="20px"
-                  width="20px"
+                  height="20"
+                  width="20"
                 />
               </div>
             </div>

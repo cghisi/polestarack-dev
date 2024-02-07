@@ -43,10 +43,8 @@ const Header = ({ navigation }) => {
       }}>
         <div className="container mx-auto px-5 flex justify-between items-center py-6" >
           <Navigation navigation={navigation} />
-          <NextLink href={"/"} passHref className="w-1/3">
-            <a className="text-3xl text-right">
+          <NextLink href={"/"} passHref className="w-1/3 text-end text-xl">
               Polestar
-            </a>
           </NextLink>
         </div>
       </div>

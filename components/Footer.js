@@ -31,8 +31,8 @@ const Footer = ({ settings }) => {
                 color="#000"
                 label={settings.newsletter_link_label}
                 url={settings.newsletter_link}
-                height="20px"
-                width="20px"
+                height="20"
+                width="20"
               />
             </div>
           </div>

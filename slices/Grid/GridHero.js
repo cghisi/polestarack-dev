@@ -100,8 +100,8 @@ const GridHero = ({ slice }) => {
                   color={item.cta_color}
                   label={item.cta_label}
                   url={item.cta_link}
-                  height="20px"
-                  width="20px"
+                  height="20"
+                  width="20"
                 />
               </div>
             </div>
