@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import { Analytics } from '@vercel/analytics/next';
 
 import Header from "./Header";
 import Footer from "./Footer";
@@ -23,7 +24,10 @@ const Layout = ({ children, navigation, settings }) => (
       />
     </Head>
     <Header navigation={navigation}></Header>
-    <main>{children}</main>
+    <main>
+      {children}
+      <Analytics />
+    </main>
     <Footer settings={settings}></Footer>
   </>
 );
