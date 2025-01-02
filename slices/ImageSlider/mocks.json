@@ -1,0 +1,90 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Industrial"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Laborum sit incididunt ut dolor aliqua excepteur consectetur nostrud exercitation commodo proident."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "image_title",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Irure incididunt aliquip occaecat proident ut voluptate culpa exercitation in excepteur in."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "description",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Duis cillum fugiat sit voluptate velit consectetur in nisi laborum irure commodo dolore duis adipisicing. Veniam irure sint reprehenderit exercitation magna ullamco sit. Aute in ullamco excepteur irure officia occaecat exercitation."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "CTA_title",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Dolore minim et nisi aliquip ex adipisicing quis consectetur eu non duis amet pariatur ad."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "CTA_link",
+            {
+              "__TYPE__": "LinkContent",
+              "key": "f4650881-2c36-4ed0-af5c-191abbb0ebaf",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

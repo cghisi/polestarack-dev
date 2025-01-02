@@ -1,0 +1,104 @@
+[
+  {
+    "slices": {
+      "__TYPE__": "SliceContentType",
+      "value": [
+        {
+          "key": "hero_banner$451a8628-80fe-4bb3-973f-3e3b90b385e8",
+          "name": "hero_banner",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "title": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "heading1",
+                    "content": {
+                      "text": "Original"
+                    }
+                  }
+                ]
+              },
+              "description": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Sunt nulla quis dolore officia. Dolore non ea dolor quis amet anim magna. Fugiat deserunt consequat reprehenderit aute deserunt aliqua do."
+                    }
+                  }
+                ]
+              },
+              "video": {
+                "__TYPE__": "LinkContent",
+                "key": "5dbc0835-3066-4a32-be82-59ac2ae05362",
+                "value": {
+                  "__TYPE__": "FileLink",
+                  "id": "mock_Media_link",
+                  "kind": "file",
+                  "name": "mock_name",
+                  "url": "https://source.unsplash.com/daily",
+                  "size": "0"
+                }
+              },
+              "cta_link": {
+                "__TYPE__": "LinkContent",
+                "key": "696c4b60-e083-4eb6-96e2-c5532b7d701d",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "http://google.com"
+                }
+              },
+              "cta_label": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Labore proident culpa aliquip voluptate eu ut adipisicing aliqua eu tempor dolor consectetur officia. Veniam cupidatat ullamco voluptate est enim labore."
+                    }
+                  }
+                ]
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": [
+                  [
+                    "label",
+                    {
+                      "__TYPE__": "StructuredTextContent",
+                      "value": [
+                        {
+                          "type": "paragraph",
+                          "content": {
+                            "text": "Ut reprehenderit sint anim laborum reprehenderit velit cillum officia."
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    "url",
+                    {
+                      "__TYPE__": "LinkContent",
+                      "key": "3d06a2c0-e7a0-442b-ad75-9833f2335cce",
+                      "value": {
+                        "__TYPE__": "ExternalLink",
+                        "url": "https://slicemachine.dev"
+                      }
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

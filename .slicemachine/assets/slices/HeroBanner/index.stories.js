@@ -1,9 +1,0 @@
-import MyComponent from '../../../../slices/HeroBanner';
-
-export default {
-  title: 'slices/HeroBanner'
-}
-
-
-export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"label":[{"type":"paragraph","text":"Incididunt fugiat ea labore excepteur fugiat. Exercitation consectetur ad ullamco magna.","spans":[]}],"url":{"link_type":"Web","url":"http://twitter.com"}}],"primary":{"title":[{"type":"heading1","text":"Drive","spans":[]}],"description":[{"type":"paragraph","text":"Mollit elit nostrud et elit. Do sint aute ex nisi duis anim voluptate id labore aute esse culpa. Cupidatat consequat reprehenderit mollit cillum.","spans":[]}],"video":{"link_type":"Media","name":"mock","kind":"image","url":"https://source.unsplash.com/random","size":"10kB"},"cta_link":{"link_type":"Web","url":"https://prismic.io"},"cta_label":[{"type":"paragraph","text":"Ipsum sit ex ea consectetur ex. Duis magna esse mollit laborum occaecat aliquip labore.","spans":[]}]},"slice_type":"hero_banner","id":"_Default"}} />
-_Default.storyName = ''

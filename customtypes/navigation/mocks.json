@@ -1,0 +1,43 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "breathe"
+    },
+    "items": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "label",
+              {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Dolor ut ad duis pariatur."
+                    }
+                  }
+                ]
+              }
+            ],
+            [
+              "url",
+              {
+                "__TYPE__": "LinkContent",
+                "key": "232ac074-0f9a-48bb-982c-3ec139d8c3d3",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "https://slicemachine.dev"
+                }
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  }
+]

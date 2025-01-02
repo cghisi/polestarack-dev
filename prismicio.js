@@ -1,6 +1,6 @@
 import * as prismic from '@prismicio/client'
 import * as prismicNext from '@prismicio/next'
-import sm from './sm.json'
+import sm from './slicemachine.config.json'
 
 /**
  * The project's Prismic repository name.
@@ -27,7 +27,7 @@ const routes = [
  * @param config {prismicNext.CreateClientConfig} - Configuration for the Prismic client.
  */
 export const createClient = (config = {}) => {
-  const client = prismic.createClient(sm.apiEndpoint, {
+  const client = prismic.createClient(sm.repositoryName, {
     routes,
     ...config,
   })

@@ -1,6 +1,6 @@
 import React from "react";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
-import Image from "next/legacy/image";
+import Image from "next/image";
 
 export const Button = ({ style, color, label, url, width, height }) => {
   if (url) {

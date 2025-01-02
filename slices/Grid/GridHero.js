@@ -56,7 +56,6 @@ const GridHero = ({ slice }) => {
                 <div>
                   <PrismicNextImage
                     field={item.image}
-                    layout="responsive"
                     alt=""
                   />
                 </div>

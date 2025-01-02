@@ -1,0 +1,72 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Worker"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Sit magna quis anim adipisicing consequat tempor aliqua voluptate adipisicing. Aliqua ex qui minim irure deserunt duis sunt ipsum labore ea amet ad reprehenderit aliqua non. Ut ut occaecat sunt ullamco incididunt aute."
+            }
+          }
+        ]
+      },
+      "image_url": {
+        "__TYPE__": "FieldContent",
+        "value": "farmer",
+        "type": "Text"
+      },
+      "mobile_image_url": {
+        "__TYPE__": "FieldContent",
+        "value": "nodded",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "slide_title",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Quis veniam culpa elit minim excepteur deserunt."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "slide_link",
+            {
+              "__TYPE__": "LinkContent",
+              "key": "d7413a09-a86f-4364-89c8-8fec3e8aac99",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

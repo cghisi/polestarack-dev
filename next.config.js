@@ -1,5 +1,3 @@
-const withOffline = require("next-offline");
-
 // your next.js configs
 const nextConfig = {
   reactStrictMode: true,
@@ -12,4 +10,4 @@ const nextConfig = {
     ],
   },
 };
-module.exports = withOffline(nextConfig);
+module.exports = nextConfig;

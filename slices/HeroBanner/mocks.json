@@ -1,0 +1,93 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Known"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Sint nisi aute occaecat anim ipsum enim officia fugiat magna cupidatat ea."
+            }
+          }
+        ]
+      },
+      "video": {
+        "__TYPE__": "LinkContent",
+        "key": "a871a0a5-e717-43fc-8e8f-720d63bc0278",
+        "value": {
+          "__TYPE__": "FileLink",
+          "id": "mock_Media_link",
+          "kind": "file",
+          "name": "mock_name",
+          "url": "https://source.unsplash.com/daily",
+          "size": "0"
+        }
+      },
+      "cta_link": {
+        "__TYPE__": "LinkContent",
+        "key": "2139855e-1431-4d9e-a603-f93a2b0d269f",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://prismic.io"
+        }
+      },
+      "cta_label": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Exercitation exercitation pariatur deserunt nulla velit. Esse elit officia laborum Lorem consectetur sit ea adipisicing voluptate adipisicing aliqua esse esse."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "label",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Anim anim proident eiusmod pariatur sint aliquip aliquip."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "url",
+            {
+              "__TYPE__": "LinkContent",
+              "key": "ebe82ef7-95e4-4406-b1bd-b060be7242b7",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

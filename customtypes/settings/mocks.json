@@ -1,0 +1,217 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "price"
+    },
+    "newsletter_title": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Do mollit mollit eu. Consequat ad id sit ad Lorem dolor officia enim id in dolor consequat velit. Tempor eu culpa dolore ipsum nostrud aute ex laborum."
+          }
+        }
+      ]
+    },
+    "newsletter_description": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Fugiat amet dolor commodo dolor. Nostrud excepteur mollit proident ullamco qui dolore qui exercitation. Officia laborum culpa duis cillum dolore id do aute."
+          }
+        }
+      ]
+    },
+    "newsletter_link_label": {
+      "__TYPE__": "StructuredTextContent",
+      "value": [
+        {
+          "type": "paragraph",
+          "content": {
+            "text": "Cupidatat sunt nulla duis non consectetur Lorem consectetur ipsum amet veniam laborum nostrud qui nulla id."
+          }
+        }
+      ]
+    },
+    "newsletter_link": {
+      "__TYPE__": "LinkContent",
+      "key": "8f7f7878-8e85-44e4-b9b1-b338a6a47726",
+      "value": {
+        "__TYPE__": "ExternalLink",
+        "url": "http://twitter.com"
+      }
+    },
+    "column_1": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "link_label",
+              {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Sint cupidatat culpa ullamco amet veniam incididunt ad sit qui occaecat qui cupidatat deserunt."
+                    }
+                  }
+                ]
+              }
+            ],
+            [
+              "link_url",
+              {
+                "__TYPE__": "LinkContent",
+                "key": "dd5ae7c3-2f7d-4f23-8c80-642b51ecc12d",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
+            [
+              "header",
+              {
+                "__TYPE__": "BooleanContent",
+                "value": false
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "column_2": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "link_label",
+              {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Adipisicing quis do sit eiusmod mollit voluptate cillum cillum enim excepteur minim."
+                    }
+                  }
+                ]
+              }
+            ],
+            [
+              "link_url",
+              {
+                "__TYPE__": "LinkContent",
+                "key": "17f32f06-4d93-4b20-9441-3fb8a3a9c150",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "http://twitter.com"
+                }
+              }
+            ],
+            [
+              "header",
+              {
+                "__TYPE__": "BooleanContent",
+                "value": false
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "column_3": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "link_label",
+              {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Ex deserunt exercitation sint. Est enim pariatur non exercitation non laborum aute exercitation officia."
+                    }
+                  }
+                ]
+              }
+            ],
+            [
+              "link_url",
+              {
+                "__TYPE__": "LinkContent",
+                "key": "887ff715-9e04-4143-b0f5-73d93cac8305",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
+            [
+              "header",
+              {
+                "__TYPE__": "BooleanContent",
+                "value": false
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    "column_4": {
+      "__TYPE__": "GroupContentType",
+      "value": [
+        {
+          "__TYPE__": "GroupItemContent",
+          "value": [
+            [
+              "link_label",
+              {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Cillum ut laborum eiusmod officia cillum velit aliqua mollit pariatur laboris consectetur."
+                    }
+                  }
+                ]
+              }
+            ],
+            [
+              "link_url",
+              {
+                "__TYPE__": "LinkContent",
+                "key": "07114632-fa21-4589-88e0-03f9e4ff9cef",
+                "value": {
+                  "__TYPE__": "ExternalLink",
+                  "url": "https://slicemachine.dev"
+                }
+              }
+            ],
+            [
+              "header",
+              {
+                "__TYPE__": "BooleanContent",
+                "value": true
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  }
+]

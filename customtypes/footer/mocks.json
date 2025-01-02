@@ -1,0 +1,77 @@
+[
+  {
+    "uid": {
+      "__TYPE__": "UIDContent",
+      "value": "last"
+    },
+    "slices": {
+      "__TYPE__": "SliceContentType",
+      "value": [
+        {
+          "key": "navigation$22f46118-491d-4eb7-a6d0-7f4ef537ca33",
+          "name": "navigation",
+          "widget": {
+            "__TYPE__": "SharedSliceContent",
+            "variation": "default",
+            "primary": {
+              "title": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "heading1",
+                    "content": {
+                      "text": "Develop"
+                    }
+                  }
+                ]
+              },
+              "description": {
+                "__TYPE__": "StructuredTextContent",
+                "value": [
+                  {
+                    "type": "paragraph",
+                    "content": {
+                      "text": "Magna occaecat ipsum dolor. Consectetur et duis minim laborum."
+                    }
+                  }
+                ]
+              }
+            },
+            "items": [
+              {
+                "__TYPE__": "GroupItemContent",
+                "value": [
+                  [
+                    "link_label",
+                    {
+                      "__TYPE__": "StructuredTextContent",
+                      "value": [
+                        {
+                          "type": "paragraph",
+                          "content": {
+                            "text": "Et et eiusmod sint elit nisi anim."
+                          }
+                        }
+                      ]
+                    }
+                  ],
+                  [
+                    "link_url",
+                    {
+                      "__TYPE__": "LinkContent",
+                      "key": "7517ddba-059d-4cb6-b64c-4818e65fb9b7",
+                      "value": {
+                        "__TYPE__": "ExternalLink",
+                        "url": "https://slicemachine.dev"
+                      }
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]
